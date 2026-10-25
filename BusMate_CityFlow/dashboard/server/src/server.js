@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const privateDir = path.resolve(here, '../private')
+const usersFile = process.env.USERS_FILE || path.join(privateDir, 'users.json')
 const allowed = new Set(['metrics.json', 'forecast_sample.json', 'plans.json', 'routes.json', 'decision_metrics.json', 'rolling_metrics.json', 'tradeoff.json'])
 const secret = process.env.JWT_SECRET
 if (!secret || secret.length < 32) throw new Error('JWT_SECRET must be set and at least 32 characters long')
@@ -35,7 +36,7 @@ function authenticate(req, res, next) {
 app.post('/api/auth/login', loginLimiter, async (req, res) => {
   const { username, password } = req.body || {}
   try {
-    const users = JSON.parse(await readFile(path.join(privateDir, 'users.json'), 'utf8'))
+    const users = JSON.parse(await readFile(usersFile, 'utf8'))
     const user = users.find((entry) => entry.username === username)
     const valid = typeof password === 'string' && user && await bcrypt.compare(password, user.passwordHash)
     if (!valid) return res.status(401).json({ error: 'Invalid username or password' })

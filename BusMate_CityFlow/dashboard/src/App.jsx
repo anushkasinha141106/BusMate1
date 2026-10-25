@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom'
-import { Accessibility, ArrowUpRight, BusFront, CheckCircle2, CircleHelp, Globe2, Menu, X } from 'lucide-react'
+import { Accessibility, ArrowUpRight, BusFront, CheckCircle2, CircleHelp, ChevronDown, Globe2, LogOut, Menu, UserRound, X } from 'lucide-react'
 import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { usePreferences } from './context/PreferencesContext.jsx'
 import { translate } from './i18n/translations.js'
@@ -68,24 +68,42 @@ function Toggle({ label, checked, onChange }) {
   return <label className="toggle-row"><span>{label}</span><input type="checkbox" role="switch" checked={checked} onChange={(e) => onChange(e.target.checked)} /></label>
 }
 
-function Navbar({ onAccess }) {
+function Navbar({ onAccess, session, onLogout }) {
   const { language, setLanguage } = usePreferences()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState(null)
   const t = (key) => translate(language, key)
-  const links = [['/model', 'modelData'], ['/comparison', 'comparison'], ['/current', 'current']]
+  useEffect(() => {
+    const close = (event) => { if (event.key === 'Escape') { setOpenMenu(null); setMobileOpen(false) } }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [])
+  const links = [['/overview', 'overview'], ['/frequency', 'frequencyPlan'], ['/forecast', 'forecast'], ['/compare', 'planComparison']]
+  const switchLinks = [
+    [import.meta.env.VITE_HUB_URL || 'http://127.0.0.1:5170', 'BusMate home'],
+    [import.meta.env.VITE_CAMPUSSEAT_URL || 'http://127.0.0.1:5173', 'CampusSeat'],
+  ]
+  const methodLinks = [['/method/model', 'Model and data'], ['/method/comparison', 'Model comparison'], ['/method/current', 'Fleet trade-off'], ['/method/tests', 'Statistical tests and rankings']]
+  const toggleMenu = (name) => setOpenMenu((current) => current === name ? null : name)
   return <header className="site-header" role="banner"><div className="nav-inner">
-    <Link to="/model" className="brand" aria-label="CityFlow home"><span className="brand-mark"><BusFront size={23} aria-hidden="true" /></span>
-      <span className="brand-copy"><strong>CityFlow</strong></span></Link>
-    <button className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen((v) => !v)}>{menuOpen ? <X /> : <Menu />}</button>
-    <nav className={`main-nav ${menuOpen ? 'nav-open' : ''}`} aria-label="CityFlow navigation">
-      {links.map(([to, key]) => <NavLink key={to} to={to} onClick={() => setMenuOpen(false)} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>{t(key)}</NavLink>)}
+    <Link to="/overview" className="brand" aria-label="BusMate CityFlow overview"><span className="brand-mark"><BusFront size={23} aria-hidden="true" /></span>
+      <span className="brand-copy"><strong>BusMate · CityFlow</strong></span></Link>
+    <button className="icon-button mobile-menu-button" aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="cityflow-primary-nav" onClick={() => setMobileOpen((v) => !v)}>{mobileOpen ? <X /> : <Menu />}</button>
+    <div className={`nav-content ${mobileOpen ? 'nav-open' : ''}`}>
+    <nav id="cityflow-primary-nav" className="main-nav" aria-label="CityFlow navigation">
+      {links.map(([to, key]) => <NavLink key={to} to={to} onClick={() => { setMobileOpen(false); setOpenMenu(null) }} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>{t(key)}</NavLink>)}
     </nav>
     <div className="nav-actions">
+      <div className="nav-popover"><button className="nav-link dropdown-trigger" aria-expanded={openMenu === 'method'} aria-haspopup="menu" onClick={() => toggleMenu('method')}>Method and evidence <ChevronDown size={15} aria-hidden="true" /></button>
+        {openMenu === 'method' && <div className="dropdown-menu" role="menu">{methodLinks.map(([to, label]) => <NavLink role="menuitem" key={to} to={to} onClick={() => { setOpenMenu(null); setMobileOpen(false) }}>{label}</NavLink>)}</div>}</div>
+      <div className="nav-popover"><button className="access-button" aria-expanded={openMenu === 'switch'} aria-haspopup="menu" onClick={() => toggleMenu('switch')}><ArrowUpRight size={16} aria-hidden="true" />Switch <ChevronDown size={14} aria-hidden="true" /></button>
+        {openMenu === 'switch' && <div className="dropdown-menu align-right" role="menu">{switchLinks.map(([href, label]) => <a role="menuitem" key={label} href={href} onClick={() => setOpenMenu(null)}>{label}</a>)}</div>}</div>
+      <button className="access-button" onClick={onAccess}><Accessibility size={17} aria-hidden="true" /><span>Accessibility</span></button>
       <label className="language-control"><Globe2 size={16} aria-hidden="true" /><span className="sr-only">Language</span>
         <select aria-label="Language" value={language} onChange={(e) => setLanguage(e.target.value)}><option value="en">English</option><option value="hi">Hindi</option><option value="mr">Marathi</option></select></label>
-      <button className="access-button" onClick={onAccess}><Accessibility size={17} aria-hidden="true" /><span>Accessibility</span></button>
-      <a className="campus-link" href={import.meta.env.VITE_CAMPUSEAT_URL || 'http://localhost:5173/'} target="_blank" rel="noreferrer">CampusSeat <ArrowUpRight size={14} aria-hidden="true" /></a>
-    </div>
+      <div className="nav-popover"><button className="access-button user-trigger" aria-expanded={openMenu === 'user'} aria-haspopup="menu" onClick={() => toggleMenu('user')}><UserRound size={16} aria-hidden="true" /><span>{session.username}</span><ChevronDown size={14} aria-hidden="true" /></button>
+        {openMenu === 'user' && <div className="dropdown-menu align-right" role="menu"><button role="menuitem" onClick={() => { setOpenMenu(null); onLogout() }}><LogOut size={15} aria-hidden="true" />Logout</button></div>}</div>
+    </div></div>
   </div></header>
 }
 
@@ -102,9 +120,9 @@ function HonestyBanner() {
   return <div className="honesty-banner" role="note"><CircleHelp size={19} aria-hidden="true" /><p>{translate(language, 'honesty')}</p></div>
 }
 
-function Layout({ children }) {
+function Layout({ children, session, onLogout }) {
   const [accessOpen, setAccessOpen] = useState(false)
-  return <><a className="skip-link" href="#main-content">Skip to content</a><Navbar onAccess={() => setAccessOpen(true)} />
+  return <><a className="skip-link" href="#main-content">Skip to content</a><Navbar session={session} onLogout={onLogout} onAccess={() => setAccessOpen(true)} />
     <div className="page-wrap"><HonestyBanner /><main id="main-content" tabIndex="-1">{children}</main></div><Footer /><AccessPanel open={accessOpen} onClose={() => setAccessOpen(false)} /></>
 }
 
@@ -259,18 +277,31 @@ function CurrentComparison({ data }) {
   </>
 }
 
-function DashboardApp() {
+function DashboardApp({ session, onLogout }) {
   const { data, error } = useDashboardData()
   const { language } = usePreferences()
   const title = useMemo(() => translate(language, 'appName'), [language])
-  if (error) return <Layout><div className="loading-card" role="alert">{translate(language,'dataError')}</div></Layout>
-  if (!data) return <Layout><div className="loading-card" role="status"><span className="spinner" />{translate(language,'loading')}</div></Layout>
-  return <Layout><Routes><Route path="/" element={<Navigate to="/model" replace />} />
-    <Route path="/model" element={<ModelData data={data} />} />
-    <Route path="/comparison" element={<ModelComparison data={data} />} />
-    <Route path="/current" element={<CurrentComparison data={data} />} />
+  if (error) return <Layout session={session} onLogout={onLogout}><div className="loading-card" role="alert">{translate(language,'dataError')}</div></Layout>
+  if (!data) return <Layout session={session} onLogout={onLogout}><div className="loading-card" role="status"><span className="spinner" />{translate(language,'loading')}</div></Layout>
+  return <Layout session={session} onLogout={onLogout}><Routes><Route path="/" element={<Navigate to="/overview" replace />} />
+    <Route path="/overview" element={<PlaceholderPage title="Overview" />} />
+    <Route path="/frequency" element={<PlaceholderPage title="Frequency plan" />} />
+    <Route path="/forecast" element={<PlaceholderPage title="Forecast" />} />
+    <Route path="/compare" element={<CurrentComparison data={data} />} />
+    <Route path="/method" element={<Navigate to="/method/model" replace />} />
+    <Route path="/method/model" element={<ModelData data={data} />} />
+    <Route path="/method/comparison" element={<ModelComparison data={data} />} />
+    <Route path="/method/current" element={<CurrentComparison data={data} />} />
+    <Route path="/method/tests" element={<PlaceholderPage title="Statistical tests and rankings" />} />
+    <Route path="/model" element={<Navigate to="/method/model" replace />} />
+    <Route path="/comparison" element={<Navigate to="/method/comparison" replace />} />
+    <Route path="/current" element={<Navigate to="/compare" replace />} />
     <Route path="*" element={<Navigate to="/model" replace />} />
   </Routes><p className="language-note">{translate(language,'languageNote')}</p><span className="sr-only">{title}</span></Layout>
+}
+
+function PlaceholderPage({ title }) {
+  return <><PageHeader eyebrow="PLANNING WORKSPACE" title={title} description="This page is being prepared from the saved evaluation data." /><section className="card"><p>Planning view</p></section></>
 }
 
 function LoginPage({ onLogin }) {
@@ -308,7 +339,8 @@ function SessionApp() {
   }, [])
   if (session === undefined) return <main className="login-page" role="status">Checking access…</main>
   if (!session) return <LoginPage onLogin={setSession} />
-  return <><div className="session-bar"><span>Signed in as <strong>{session.username}</strong></span><button className="button secondary" onClick={async () => { await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' }); setSession(null) }}>Logout</button></div><DashboardApp /></>
+  async function logout() { await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' }); setSession(null) }
+  return <DashboardApp session={session} onLogout={logout} />
 }
 
 export default SessionApp

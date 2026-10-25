@@ -2,6 +2,10 @@ export const translations = {
   en: {
     appName: 'CityFlow',
     campusSeat: 'CampusSeat',
+    overview: 'Overview',
+    frequencyPlan: 'Frequency plan',
+    forecast: 'Forecast',
+    planComparison: 'Plan comparison',
     modelData: 'Model & data',
     comparison: 'Model comparison',
     current: 'Compare with current',

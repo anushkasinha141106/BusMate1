@@ -3,3 +3,4 @@ server/private/users.json
 .env
 node_modules/
 dist/
+!.env.example
