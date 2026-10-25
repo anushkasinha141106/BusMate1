@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://bus-mate1-f3t8lfrmr-anushkasinha141106s-projects.vercel.app/api/$1"
+    }
+  ]
+}
