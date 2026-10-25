@@ -1,0 +1,70 @@
+{
+  "studyInfo": {
+    "title": "2×2 Factorial User Experience & Fairness Perception Study",
+    "description": "Simulated HCI evaluation comparing user trust, perceived fairness, and task efficiency across automated vs explainable and user-controlled allocation interfaces.",
+    "sampleSize": 120,
+    "simulationNotice": "Simulated prototype study results for research demonstration."
+  },
+  "conditions": [
+    {
+      "id": "Condition_A",
+      "code": "A",
+      "explanation": "Off",
+      "userControl": "Off",
+      "name": "Black-Box Baseline (No Explanation, No Control)",
+      "trustScore": 3.2,
+      "perceivedFairness": 2.8,
+      "acceptanceRate": 42,
+      "satisfaction": 3.1,
+      "understanding": 2.2,
+      "taskCompletionTimeSec": 45,
+      "userErrorRate": 18.5,
+      "summary": "Users expressed high skepticism toward waitlist outcomes without explanations or alternative booking agency."
+    },
+    {
+      "id": "Condition_B",
+      "code": "B",
+      "explanation": "On",
+      "userControl": "Off",
+      "name": "Transparent Passive (SHAP Explanation On, No Control)",
+      "trustScore": 5.4,
+      "perceivedFairness": 5.1,
+      "acceptanceRate": 68,
+      "satisfaction": 5.2,
+      "understanding": 6.3,
+      "taskCompletionTimeSec": 62,
+      "userErrorRate": 9.2,
+      "summary": "SHAP explanations significantly improved perceived fairness and algorithmic understanding, though users desired control to modify preferences."
+    },
+    {
+      "id": "Condition_C",
+      "code": "C",
+      "explanation": "Off",
+      "userControl": "On",
+      "name": "Interactive Unexplained (No Explanation, Control On)",
+      "trustScore": 4.6,
+      "perceivedFairness": 4.2,
+      "acceptanceRate": 61,
+      "satisfaction": 4.8,
+      "understanding": 3.5,
+      "taskCompletionTimeSec": 58,
+      "userErrorRate": 14.1,
+      "summary": "Agency to re-request seats or select alternative trips improved satisfaction, but lack of transparency left reasons for initial waitlists unclear."
+    },
+    {
+      "id": "Condition_D",
+      "code": "D",
+      "explanation": "On",
+      "userControl": "On",
+      "name": "Full SmartBus System (SHAP Explanation On, Control On)",
+      "trustScore": 6.6,
+      "perceivedFairness": 6.5,
+      "acceptanceRate": 91,
+      "satisfaction": 6.7,
+      "understanding": 6.8,
+      "taskCompletionTimeSec": 38,
+      "userErrorRate": 3.8,
+      "summary": "Combining transparent XAI feature attributions with proactive user controls (alternative rebooking, review requests) achieved highest trust and system acceptance."
+    }
+  ]
+}

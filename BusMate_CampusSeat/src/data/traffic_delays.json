@@ -1,0 +1,62 @@
+[
+  {
+    "corridorName": "Shivaji Road & Swargate Junction",
+    "corridorId": "CORR_01_SHIVAJI",
+    "averageVolumePCU": 1918,
+    "averageSpeedKmh": 29.9,
+    "freeFlowSpeedKmh": 42.0,
+    "averageDelayMinutes": 11,
+    "congestionIndex": 0.44,
+    "status": "Moderate Flow",
+    "peakHours": "08:30 - 10:30 & 17:30 - 20:00",
+    "incidentRisk": "Low"
+  },
+  {
+    "corridorName": "Satara Road Expressway",
+    "corridorId": "CORR_02_SATARA",
+    "averageVolumePCU": 1927,
+    "averageSpeedKmh": 39.1,
+    "freeFlowSpeedKmh": 55.0,
+    "averageDelayMinutes": 11,
+    "congestionIndex": 0.45,
+    "status": "Moderate Flow",
+    "peakHours": "08:30 - 10:30 & 17:30 - 20:00",
+    "incidentRisk": "Low"
+  },
+  {
+    "corridorName": "Hinjawadi IT Expressway",
+    "corridorId": "CORR_03_HINJAWADI",
+    "averageVolumePCU": 1939,
+    "averageSpeedKmh": 35.4,
+    "freeFlowSpeedKmh": 50.0,
+    "averageDelayMinutes": 11,
+    "congestionIndex": 0.45,
+    "status": "Moderate Flow",
+    "peakHours": "08:30 - 10:30 & 17:30 - 20:00",
+    "incidentRisk": "Low"
+  },
+  {
+    "corridorName": "Old Pune-Mumbai Highway",
+    "corridorId": "CORR_04_PUNE_HIGHWAY",
+    "averageVolumePCU": 1934,
+    "averageSpeedKmh": 42.5,
+    "freeFlowSpeedKmh": 60.0,
+    "averageDelayMinutes": 11,
+    "congestionIndex": 0.45,
+    "status": "Moderate Flow",
+    "peakHours": "08:30 - 10:30 & 17:30 - 20:00",
+    "incidentRisk": "Low"
+  },
+  {
+    "corridorName": "Airport Bund Garden Corridor",
+    "corridorId": "CORR_05_AIRPORT_RD",
+    "averageVolumePCU": 1929,
+    "averageSpeedKmh": 31.9,
+    "freeFlowSpeedKmh": 45.0,
+    "averageDelayMinutes": 11,
+    "congestionIndex": 0.45,
+    "status": "Moderate Flow",
+    "peakHours": "08:30 - 10:30 & 17:30 - 20:00",
+    "incidentRisk": "Low"
+  }
+]

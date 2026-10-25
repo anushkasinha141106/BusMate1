@@ -1,0 +1,224 @@
+{
+  "total_sheet_rows": 2243,
+  "total_sheet_cols": 22,
+  "raw_headers_detected": 288,
+  "unparseable_headers": [],
+  "dropped_no_time_headers": [
+    {
+      "row": 564,
+      "header": "Date: 21/08/26 | Bus: PMPML Bus | Route: IIIT to Talegaon (Out time: -)"
+    },
+    {
+      "row": 744,
+      "header": "Date: 28/08/26 | Bus: College Bus | Route: Talegaon to IIIT ( time: -)"
+    },
+    {
+      "row": 1012,
+      "header": "Date: 26/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Contd.)"
+    },
+    {
+      "row": 1024,
+      "header": "Date: 27/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Extra) (Out Time: --)"
+    },
+    {
+      "row": 1268,
+      "header": "Date: 26/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1304,
+      "header": "Date: 24/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1399,
+      "header": "Date: 29/08/26 | Bus: College Bus | Route: Talegaon to IIIT ( Time: --)"
+    },
+    {
+      "row": 1484,
+      "header": "Date: 30/08/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1497,
+      "header": "Date: 28/8/26 | Bus: College Bus | Route: Talegaon to IIIT ( Time: --)"
+    },
+    {
+      "row": 1546,
+      "header": "Date: 28/8/26 | Bus: College Bus | Route: Talegaon to IIIT ( Time: --)"
+    },
+    {
+      "row": 1558,
+      "header": "Date: 29/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1645,
+      "header": "Date: 27/8/26 | Bus: College Bus | Route: Talegaon to IIIT ( Time: --)"
+    },
+    {
+      "row": 1684,
+      "header": "Date: 29/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1707,
+      "header": "Date: 28/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1904,
+      "header": "Date: 28/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1910,
+      "header": "Date: 28/8/26 | Bus: PMPML Bus | Route: Talegaon to IIIT ( Time: --)"
+    },
+    {
+      "row": 1916,
+      "header": "Date: 28/8/26 | Bus: PMPML Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 1921,
+      "header": "Date: 30/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 2152,
+      "header": "Date: 30/8/26 | Bus: College Bus | Route: IIIT to Talegaon (Out Time: --)"
+    },
+    {
+      "row": 2221,
+      "header": "Date: 20/8/26 | Bus: College Bus | Route: Talegaon to IIIT (Part 2)"
+    }
+  ],
+  "dropped_unknown_routes": [
+    {
+      "row": 922,
+      "header": "Date: 27/8/26 | Bus: College Bus | Route: Log Entries (Column 2)"
+    },
+    {
+      "row": 1979,
+      "header": "Date: 30/8/26 | Bus: College Bus | Route: 30/8/26 Roster List (Part 1)"
+    },
+    {
+      "row": 2025,
+      "header": "Date: 30/8/26 | Bus: College Bus | Route: 30/8/26 Roster List (Part 2)"
+    },
+    {
+      "row": 2177,
+      "header": "Date: 30/8/26 | Bus: College Bus | Route: Roster Contuation List"
+    }
+  ],
+  "duplicate_blocks_merged": [
+    {
+      "key": "2026-08-16 TALEGAON 19:01 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        2,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-16 TALEGAON 19:40 inbound",
+      "occurrences": 3,
+      "booking_counts": [
+        16,
+        0,
+        16
+      ]
+    },
+    {
+      "key": "2026-08-16 TALEGAON 19:50 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-17 TALEGAON 08:52 inbound",
+      "occurrences": 2,
+      "booking_counts": [
+        14,
+        14
+      ]
+    },
+    {
+      "key": "2026-08-17 GODAVARI 09:01 inbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-17 TALEGAON 09:45 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-19 TALEGAON 18:15 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        11
+      ]
+    },
+    {
+      "key": "2026-08-23 GODAVARI 14:31 inbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        7
+      ]
+    },
+    {
+      "key": "2026-08-28 TALEGAON 18:00 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        4
+      ]
+    },
+    {
+      "key": "2026-08-26 TALEGAON 18:16 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "key": "2026-08-28 TALEGAON 15:02 inbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-28 TALEGAON 17:18 inbound",
+      "occurrences": 2,
+      "booking_counts": [
+        0,
+        4
+      ]
+    },
+    {
+      "key": "2026-08-28 TALEGAON 18:15 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        5,
+        0
+      ]
+    },
+    {
+      "key": "2026-08-27 TALEGAON 18:20 outbound",
+      "occurrences": 2,
+      "booking_counts": [
+        5,
+        1
+      ]
+    }
+  ],
+  "empty_roster_trips": 161,
+  "overcapacity_trips": 0,
+  "duplicate_mis_dropped": 17
+}

@@ -1,0 +1,15 @@
+{
+  "hour": 0.0,
+  "time_dec": 0.0,
+  "is_weekend_int": 27.2,
+  "is_peak_int": 23.8,
+  "temperature_c": 0.1,
+  "is_rain": 0.0,
+  "prior_mean": 0.6,
+  "route_LINE_SWAR_STN": 0.0,
+  "route_LINE_KATR_SHIV": 3.1,
+  "route_LINE_HINJ_STN": 26.0,
+  "route_LINE_HAD_KOTH": 5.0,
+  "route_LINE_VIM_SWAR": 12.4,
+  "route_LINE_PUN_TALE": 1.7
+}

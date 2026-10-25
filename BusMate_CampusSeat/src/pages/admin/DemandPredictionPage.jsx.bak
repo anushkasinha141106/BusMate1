@@ -1,0 +1,214 @@
+import React, { useState } from 'react';
+import { predictDemand } from '../../services/predictionService';
+import { SimulationNotice } from '../../components/common/SimulationNotice';
+import { LineChart as LineChartIcon, CloudRain, Calendar, Clock, Zap, BarChart2 } from 'lucide-react';
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+
+export const DemandPredictionPage = () => {
+  const [route, setRoute] = useState('Route 15');
+  const [busId, setBusId] = useState('SB-04');
+  const [date, setDate] = useState('2026-09-15');
+  const [dayOfWeek, setDayOfWeek] = useState('Friday');
+  const [timeSlot, setTimeSlot] = useState('05:00 PM');
+  const [weather, setWeather] = useState('Sunny');
+  const [event, setEvent] = useState('Campus Event');
+  const [recentDemandTrend, setRecentDemandTrend] = useState(1.15);
+
+  const prediction = predictDemand({
+    busCapacity: 50,
+    baseDemand: 42,
+    dayOfWeek,
+    timeSlot,
+    weather,
+    event,
+    recentDemandTrend
+  });
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      
+      {/* Header */}
+      <div className="bg-white border-2 border-slate-300 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <div className="flex items-center gap-2">
+            <LineChartIcon className="w-6 h-6 text-sky-800" />
+            <h1 className="text-3xl font-black text-slate-900 tracking-tight">ML Passenger Demand Prediction</h1>
+          </div>
+          <p className="text-sm font-bold text-slate-600 mt-1">
+            Simulate ML regression predicting trip demand volume based on temporal, weather, and event context.
+          </p>
+        </div>
+
+        <SimulationNotice text={prediction.simulationTag} />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        {/* Left: Input Predictor Controls */}
+        <div className="lg:col-span-5 bg-white border-2 border-slate-300 rounded-2xl p-6 shadow-sm space-y-5">
+          <h2 className="text-lg font-black text-slate-900 border-b border-slate-200 pb-3">
+            Prediction Context Selectors
+          </h2>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Route</label>
+              <select
+                value={route}
+                onChange={(e) => setRoute(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              >
+                <option value="Route 15">Route 15 (Campus Express)</option>
+                <option value="Route 5">Route 5 (City Loop)</option>
+                <option value="Route 8">Route 8 (Tech Corridor)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Bus ID</label>
+              <input
+                type="text"
+                value={busId}
+                onChange={(e) => setBusId(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Day of Week</label>
+              <select
+                value={dayOfWeek}
+                onChange={(e) => setDayOfWeek(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              >
+                <option value="Monday">Monday</option>
+                <option value="Friday">Friday (Peak)</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Time Slot</label>
+              <select
+                value={timeSlot}
+                onChange={(e) => setTimeSlot(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              >
+                <option value="08:15 AM">08:15 AM (Morning Peak)</option>
+                <option value="02:00 PM">02:00 PM (Off-Peak)</option>
+                <option value="05:00 PM">05:00 PM (Evening Peak)</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Weather</label>
+              <select
+                value={weather}
+                onChange={(e) => setWeather(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              >
+                <option value="Sunny">Sunny / Clear</option>
+                <option value="Rain">Rain (+10%)</option>
+                <option value="Heavy Rain">Heavy Rain (+22%)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Local Event</label>
+              <select
+                value={event}
+                onChange={(e) => setEvent(e.target.value)}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-bold text-slate-900"
+              >
+                <option value="None">None</option>
+                <option value="Campus Event">Campus Concert / End</option>
+                <option value="Football Match">Stadium Football Match</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
+              Recent Demand Trend Multiplier: {recentDemandTrend}x
+            </label>
+            <input
+              type="range"
+              min="0.8"
+              max="1.5"
+              step="0.05"
+              value={recentDemandTrend}
+              onChange={(e) => setRecentDemandTrend(parseFloat(e.target.value))}
+              className="w-full accent-sky-800"
+            />
+          </div>
+        </div>
+
+        {/* Right: ML Output Metrics & Recharts Visual */}
+        <div className="lg:col-span-7 space-y-6">
+          
+          {/* Key Output Metrics Cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="bg-sky-900 text-white p-4 rounded-xl shadow">
+              <div className="text-xs text-sky-200 font-bold uppercase">Predicted Demand</div>
+              <div className="text-3xl font-black">{prediction.predictedDemand}</div>
+              <div className="text-[11px] text-sky-300">passengers</div>
+            </div>
+
+            <div className="bg-slate-800 text-white p-4 rounded-xl shadow">
+              <div className="text-xs text-slate-400 font-bold uppercase">Confidence Range</div>
+              <div className="text-lg font-black text-emerald-400">{prediction.confidenceRange}</div>
+              <div className="text-[11px] text-slate-400">95% CI</div>
+            </div>
+
+            <div className="bg-white border-2 border-slate-300 p-4 rounded-xl shadow-sm">
+              <div className="text-xs text-slate-500 font-bold uppercase">Bus Capacity</div>
+              <div className="text-2xl font-black text-slate-900">{prediction.busCapacity}</div>
+              <div className="text-[11px] text-slate-500">total seats</div>
+            </div>
+
+            <div className="bg-amber-50 border-2 border-amber-300 p-4 rounded-xl shadow-sm">
+              <div className="text-xs text-amber-800 font-bold uppercase">Expected Utilization</div>
+              <div className="text-2xl font-black text-amber-900">{prediction.expectedUtilization}%</div>
+              <div className="text-[11px] text-amber-800">overbooking risk</div>
+            </div>
+          </div>
+
+          {/* Historical vs Predicted Chart */}
+          <div className="bg-white border-2 border-slate-300 rounded-2xl p-6 shadow-sm space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="text-base font-black text-slate-900 flex items-center gap-2">
+                <BarChart2 className="w-5 h-5 text-sky-800" />
+                <span>Historical Average vs Predicted Demand Timeline</span>
+              </h3>
+            </div>
+
+            <div className="h-64 w-full pt-2">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={prediction.timelineData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                  <XAxis dataKey="time" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Area type="monotone" dataKey="historical" stroke="#475569" fill="#CBD5E1" name="Historical Avg" />
+                  <Area type="monotone" dataKey="predicted" stroke="#075985" fill="#075985" fillOpacity={0.4} name="ML Predicted Demand" />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+
+            <p className="text-xs text-slate-500 italic text-center">
+              Demonstrates peak surge at 05:00 PM driven by recent trend and campus event finish.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+};

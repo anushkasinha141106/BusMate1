@@ -1,0 +1,50 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 100,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2.2300000000000013,
+    "medianResTime" : 2.0,
+    "minResTime" : 1.0,
+    "maxResTime" : 42.0,
+    "pct1ResTime" : 3.0,
+    "pct2ResTime" : 3.0,
+    "pct3ResTime" : 41.619999999999806,
+    "throughput" : 14.114326040931546,
+    "receivedKBytesPerSec" : 84.25866707833451,
+    "sentKBytesPerSec" : 2.0882035109386026
+  },
+  "GET /api/trips?route=GODAVARI" : {
+    "transaction" : "GET /api/trips?route=GODAVARI",
+    "sampleCount" : 50,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 2.7400000000000007,
+    "medianResTime" : 2.0,
+    "minResTime" : 1.0,
+    "maxResTime" : 42.0,
+    "pct1ResTime" : 3.0,
+    "pct2ResTime" : 4.0,
+    "pct3ResTime" : 42.0,
+    "throughput" : 7.372456502506636,
+    "receivedKBytesPerSec" : 78.69953323134769,
+    "sentKBytesPerSec" : 1.007953037452079
+  },
+  "GET /api/demand?route=TALEGAON&day=Friday&slot=18:15" : {
+    "transaction" : "GET /api/demand?route=TALEGAON&day=Friday&slot=18:15",
+    "sampleCount" : 50,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 1.7200000000000002,
+    "medianResTime" : 2.0,
+    "minResTime" : 1.0,
+    "maxResTime" : 3.0,
+    "pct1ResTime" : 2.0,
+    "pct2ResTime" : 2.4499999999999957,
+    "pct3ResTime" : 3.0,
+    "throughput" : 7.4217010538815495,
+    "receivedKBytesPerSec" : 9.385842641383405,
+    "sentKBytesPerSec" : 1.1813840544752858
+  }
+}

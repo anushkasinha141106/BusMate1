@@ -1,0 +1,64 @@
+// SmartBus Demand Prediction Service
+// Simulates an ML regression model predicting total passenger demand volume.
+// Designed with a service abstraction so it can be swapped with Python/FastAPI ML endpoints.
+
+export const predictDemand = (params = {}) => {
+  const {
+    busCapacity = 50,
+    baseDemand = 42,
+    dayOfWeek = 'Friday',
+    timeSlot = '05:00 PM',
+    weather = 'Sunny',
+    event = 'Campus Event',
+    recentDemandTrend = 1.15
+  } = params;
+
+  let multiplier = 1.0;
+
+  // Day factor
+  if (dayOfWeek === 'Friday' || dayOfWeek === 'Monday') multiplier += 0.15;
+  if (dayOfWeek === 'Saturday' || dayOfWeek === 'Sunday') multiplier -= 0.25;
+
+  // Time slot factor (Peak hours)
+  if (timeSlot.includes('08:00 AM') || timeSlot.includes('05:00 PM') || timeSlot.includes('08:15 AM')) {
+    multiplier += 0.30;
+  }
+
+  // Weather factor
+  if (weather === 'Rain') multiplier += 0.10;
+  if (weather === 'Heavy Rain') multiplier += 0.22;
+  if (weather === 'Snow') multiplier += 0.18;
+
+  // Campus Event factor
+  if (event === 'Campus Event' || event === 'Concert') multiplier += 0.25;
+  if (event === 'Football Match') multiplier += 0.35;
+
+  // Recent trend
+  multiplier *= recentDemandTrend;
+
+  const predicted = Math.round(baseDemand * multiplier);
+  const confidenceMargin = 5;
+  const historicalAvg = Math.round(baseDemand * 0.9);
+  const expectedUtilization = Math.round((predicted / busCapacity) * 100);
+
+  // Generate historical comparison timeline for Recharts chart
+  const timelineData = [
+    { time: '01:00 PM', historical: Math.round(baseDemand * 0.5), predicted: Math.round(baseDemand * 0.52) },
+    { time: '02:00 PM', historical: Math.round(baseDemand * 0.6), predicted: Math.round(baseDemand * 0.65) },
+    { time: '03:00 PM', historical: Math.round(baseDemand * 0.75), predicted: Math.round(baseDemand * 0.78) },
+    { time: '04:00 PM', historical: Math.round(baseDemand * 0.95), predicted: Math.round(baseDemand * 1.05) },
+    { time: '05:00 PM', historical: historicalAvg, predicted: predicted },
+    { time: '06:00 PM', historical: Math.round(baseDemand * 0.85), predicted: Math.round(baseDemand * 0.90) },
+    { time: '07:00 PM', historical: Math.round(baseDemand * 0.6), predicted: Math.round(baseDemand * 0.62) },
+  ];
+
+  return {
+    predictedDemand: predicted,
+    confidenceRange: `${predicted - confidenceMargin} - ${predicted + confidenceMargin}`,
+    historicalAverage: historicalAvg,
+    busCapacity: busCapacity,
+    expectedUtilization: expectedUtilization,
+    timelineData,
+    simulationTag: 'Simulated ML prediction for prototype demonstration.'
+  };
+};

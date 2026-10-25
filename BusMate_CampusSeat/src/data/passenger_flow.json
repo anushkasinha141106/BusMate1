@@ -1,0 +1,366 @@
+[
+  {
+    "stationName": "Pune Central Railway Station",
+    "totalBoardings": 0,
+    "totalAlightings": 7999,
+    "averageOccupancyPct": 0.0,
+    "demographics": {
+      "adults": 0,
+      "students": 0,
+      "seniors": 0,
+      "womenConcessions": 0
+    },
+    "interchangeVolume": 7999
+  },
+  {
+    "stationName": "Shivajinagar Metro Station",
+    "totalBoardings": 0,
+    "totalAlightings": 2877,
+    "averageOccupancyPct": 0.0,
+    "demographics": {
+      "adults": 0,
+      "students": 0,
+      "seniors": 0,
+      "womenConcessions": 0
+    },
+    "interchangeVolume": 2877
+  },
+  {
+    "stationName": "Katraj Bus Stand",
+    "totalBoardings": 2265,
+    "totalAlightings": 0,
+    "averageOccupancyPct": 56.6,
+    "demographics": {
+      "adults": 660,
+      "students": 563,
+      "seniors": 309,
+      "womenConcessions": 745
+    },
+    "interchangeVolume": 2265
+  },
+  {
+    "stationName": "Talegaon Railway Station",
+    "totalBoardings": 2084,
+    "totalAlightings": 0,
+    "averageOccupancyPct": 52.7,
+    "demographics": {
+      "adults": 601,
+      "students": 540,
+      "seniors": 281,
+      "womenConcessions": 666
+    },
+    "interchangeVolume": 2084
+  },
+  {
+    "stationName": "Swargate Bus Stand",
+    "totalBoardings": 2017,
+    "totalAlightings": 0,
+    "averageOccupancyPct": 51.7,
+    "demographics": {
+      "adults": 606,
+      "students": 497,
+      "seniors": 270,
+      "womenConcessions": 641
+    },
+    "interchangeVolume": 2017
+  },
+  {
+    "stationName": "Hinjawadi Phase 3 Quad",
+    "totalBoardings": 1935,
+    "totalAlightings": 0,
+    "averageOccupancyPct": 51.7,
+    "demographics": {
+      "adults": 553,
+      "students": 487,
+      "seniors": 249,
+      "womenConcessions": 644
+    },
+    "interchangeVolume": 1935
+  },
+  {
+    "stationName": "Somatane Phata",
+    "totalBoardings": 856,
+    "totalAlightings": 839,
+    "averageOccupancyPct": 53.2,
+    "demographics": {
+      "adults": 250,
+      "students": 217,
+      "seniors": 116,
+      "womenConcessions": 276
+    },
+    "interchangeVolume": 1695
+  },
+  {
+    "stationName": "Shaniwar Wada",
+    "totalBoardings": 879,
+    "totalAlightings": 762,
+    "averageOccupancyPct": 71.9,
+    "demographics": {
+      "adults": 259,
+      "students": 215,
+      "seniors": 116,
+      "womenConcessions": 289
+    },
+    "interchangeVolume": 1641
+  },
+  {
+    "stationName": "Padmavati",
+    "totalBoardings": 875,
+    "totalAlightings": 763,
+    "averageOccupancyPct": 61.5,
+    "demographics": {
+      "adults": 273,
+      "students": 213,
+      "seniors": 118,
+      "womenConcessions": 278
+    },
+    "interchangeVolume": 1638
+  },
+  {
+    "stationName": "Wakad Bridge",
+    "totalBoardings": 871,
+    "totalAlightings": 763,
+    "averageOccupancyPct": 58.7,
+    "demographics": {
+      "adults": 254,
+      "students": 221,
+      "seniors": 115,
+      "womenConcessions": 284
+    },
+    "interchangeVolume": 1634
+  },
+  {
+    "stationName": "Bharati Vidyapeeth",
+    "totalBoardings": 858,
+    "totalAlightings": 774,
+    "averageOccupancyPct": 58.7,
+    "demographics": {
+      "adults": 239,
+      "students": 224,
+      "seniors": 116,
+      "womenConcessions": 288
+    },
+    "interchangeVolume": 1632
+  },
+  {
+    "stationName": "Juna Bazar",
+    "totalBoardings": 879,
+    "totalAlightings": 752,
+    "averageOccupancyPct": 66.6,
+    "demographics": {
+      "adults": 253,
+      "students": 226,
+      "seniors": 119,
+      "womenConcessions": 288
+    },
+    "interchangeVolume": 1631
+  },
+  {
+    "stationName": "Chinchwad Station",
+    "totalBoardings": 874,
+    "totalAlightings": 754,
+    "averageOccupancyPct": 64.3,
+    "demographics": {
+      "adults": 263,
+      "students": 218,
+      "seniors": 110,
+      "womenConcessions": 285
+    },
+    "interchangeVolume": 1628
+  },
+  {
+    "stationName": "Pimpri Chowk",
+    "totalBoardings": 891,
+    "totalAlightings": 735,
+    "averageOccupancyPct": 67.9,
+    "demographics": {
+      "adults": 272,
+      "students": 222,
+      "seniors": 118,
+      "womenConcessions": 287
+    },
+    "interchangeVolume": 1626
+  },
+  {
+    "stationName": "ABC Chowk",
+    "totalBoardings": 837,
+    "totalAlightings": 788,
+    "averageOccupancyPct": 60.2,
+    "demographics": {
+      "adults": 248,
+      "students": 207,
+      "seniors": 110,
+      "womenConcessions": 273
+    },
+    "interchangeVolume": 1625
+  },
+  {
+    "stationName": "Mandai",
+    "totalBoardings": 896,
+    "totalAlightings": 723,
+    "averageOccupancyPct": 69.0,
+    "demographics": {
+      "adults": 255,
+      "students": 231,
+      "seniors": 117,
+      "womenConcessions": 290
+    },
+    "interchangeVolume": 1619
+  },
+  {
+    "stationName": "Swargate",
+    "totalBoardings": 866,
+    "totalAlightings": 737,
+    "averageOccupancyPct": 64.7,
+    "demographics": {
+      "adults": 253,
+      "students": 217,
+      "seniors": 113,
+      "womenConcessions": 287
+    },
+    "interchangeVolume": 1603
+  },
+  {
+    "stationName": "Aundh D-Mart",
+    "totalBoardings": 873,
+    "totalAlightings": 728,
+    "averageOccupancyPct": 62.5,
+    "demographics": {
+      "adults": 271,
+      "students": 218,
+      "seniors": 109,
+      "womenConcessions": 275
+    },
+    "interchangeVolume": 1601
+  },
+  {
+    "stationName": "Nigdi Depot",
+    "totalBoardings": 834,
+    "totalAlightings": 753,
+    "averageOccupancyPct": 61.4,
+    "demographics": {
+      "adults": 238,
+      "students": 220,
+      "seniors": 118,
+      "womenConcessions": 268
+    },
+    "interchangeVolume": 1587
+  },
+  {
+    "stationName": "Khadki Market",
+    "totalBoardings": 822,
+    "totalAlightings": 765,
+    "averageOccupancyPct": 69.2,
+    "demographics": {
+      "adults": 236,
+      "students": 204,
+      "seniors": 113,
+      "womenConcessions": 263
+    },
+    "interchangeVolume": 1587
+  },
+  {
+    "stationName": "Shanipar",
+    "totalBoardings": 867,
+    "totalAlightings": 719,
+    "averageOccupancyPct": 58.9,
+    "demographics": {
+      "adults": 243,
+      "students": 223,
+      "seniors": 119,
+      "womenConcessions": 279
+    },
+    "interchangeVolume": 1586
+  },
+  {
+    "stationName": "PMC Bhavan",
+    "totalBoardings": 851,
+    "totalAlightings": 727,
+    "averageOccupancyPct": 63.3,
+    "demographics": {
+      "adults": 276,
+      "students": 196,
+      "seniors": 107,
+      "womenConcessions": 276
+    },
+    "interchangeVolume": 1578
+  },
+  {
+    "stationName": "Pune University Circle",
+    "totalBoardings": 877,
+    "totalAlightings": 696,
+    "averageOccupancyPct": 67.2,
+    "demographics": {
+      "adults": 274,
+      "students": 215,
+      "seniors": 113,
+      "womenConcessions": 289
+    },
+    "interchangeVolume": 1573
+  },
+  {
+    "stationName": "Shivajinagar Station",
+    "totalBoardings": 864,
+    "totalAlightings": 702,
+    "averageOccupancyPct": 71.2,
+    "demographics": {
+      "adults": 245,
+      "students": 227,
+      "seniors": 115,
+      "womenConcessions": 282
+    },
+    "interchangeVolume": 1566
+  },
+  {
+    "stationName": "Dehu Road",
+    "totalBoardings": 903,
+    "totalAlightings": 658,
+    "averageOccupancyPct": 59.4,
+    "demographics": {
+      "adults": 280,
+      "students": 227,
+      "seniors": 117,
+      "womenConcessions": 294
+    },
+    "interchangeVolume": 1561
+  },
+  {
+    "stationName": "Sarasbaug",
+    "totalBoardings": 832,
+    "totalAlightings": 700,
+    "averageOccupancyPct": 55.1,
+    "demographics": {
+      "adults": 240,
+      "students": 207,
+      "seniors": 115,
+      "womenConcessions": 275
+    },
+    "interchangeVolume": 1532
+  },
+  {
+    "stationName": "Hinjawadi Phase 1",
+    "totalBoardings": 765,
+    "totalAlightings": 757,
+    "averageOccupancyPct": 55.8,
+    "demographics": {
+      "adults": 228,
+      "students": 187,
+      "seniors": 104,
+      "womenConcessions": 252
+    },
+    "interchangeVolume": 1522
+  },
+  {
+    "stationName": "Megapolis Hub",
+    "totalBoardings": 795,
+    "totalAlightings": 650,
+    "averageOccupancyPct": 55.6,
+    "demographics": {
+      "adults": 235,
+      "students": 199,
+      "seniors": 100,
+      "womenConcessions": 262
+    },
+    "interchangeVolume": 1445
+  }
+]

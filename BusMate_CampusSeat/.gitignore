@@ -1,0 +1,54 @@
+# Secrets & Credentials
+.env
+.env*.local
+.env.production
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+ml_service/__pycache__/
+ml_service/venv/
+*.pyc
+
+# Builds & Cache
+dist/
+dist-ssr/
+build/
+.next/
+.cache/
+.vite/
+
+# Local SQLite / Logs / Performance test outputs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.jtl
+
+# Python Virtual Environments & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# System & IDE Editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+scratch/

@@ -1,0 +1,295 @@
+{
+  "responses": [
+    {
+      "id": "RESP_01",
+      "accommodation": "Off Campus flat/private apartment",
+      "destination": "Pune",
+      "frequency": "Rarely / Only during exam/transit days",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "17:30",
+      "flexibility": "Within 30 minutes of preferred time",
+      "connectingTrain": "06:30 AM",
+      "bufferRequired": "15-30 minutes",
+      "fallbackTransit": "Personal vehicle (Two-wheeler / Car)",
+      "allocationFactors": [
+        "Fixed connecting transit",
+        "Strict arrival deadline",
+        "Alternative bus availability",
+        "Total wait time",
+        "Booking time",
+        "Health/mobility needs"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "2\u20134 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    },
+    {
+      "id": "RESP_02",
+      "accommodation": "Off Campus flat/private apartment",
+      "destination": "Talegaon railway station",
+      "frequency": "Frequently (2\u20133 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ],
+      "preferredTime": "17:15",
+      "flexibility": "Within 30 minutes of preferred time",
+      "connectingTrain": "Flexible",
+      "bufferRequired": "10-15 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "Strict arrival deadline",
+        "Alternative bus availability",
+        "Booking time"
+      ],
+      "wantsExplanation": "No (Simple notification)",
+      "finalizationLeadTime": "2\u20134 hours before departure",
+      "fairestSystem": "Equity-Weighted: Dynamic points system"
+    },
+    {
+      "id": "RESP_03",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Occasionally (1\u20132 times a month)",
+      "daysNeeded": [
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "17:00",
+      "flexibility": "Within 30 minutes of preferred time",
+      "connectingTrain": "Flexible",
+      "bufferRequired": "15-30 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "FCFS order",
+        "Health or physical mobility needs"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "2\u20134 hours before departure",
+      "fairestSystem": "Equity-Weighted: Dynamic points system"
+    },
+    {
+      "id": "RESP_04",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Frequently (2\u20133 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "10:30, 17:30",
+      "flexibility": "Within 15 minutes of preferred time",
+      "connectingTrain": "10:55 AM, 11:15 AM",
+      "bufferRequired": "10-15 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "Alternative bus availability",
+        "Total wait time for next bus"
+      ],
+      "wantsExplanation": "Maybe (Only if delay > 30 mins)",
+      "finalizationLeadTime": "24 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    },
+    {
+      "id": "RESP_05",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Frequently (2\u20133 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Friday"
+      ],
+      "preferredTime": "15:00, 16:15",
+      "flexibility": "Fixed (Cannot accept any time slot other than requested)",
+      "connectingTrain": "15:15 local, 16:45 local",
+      "bufferRequired": "10-15 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "Fixed connecting transit",
+        "Alternative bus availability",
+        "Total wait time"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "24 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    },
+    {
+      "id": "RESP_06",
+      "accommodation": "Off Campus flat/private apartment",
+      "destination": "Talegaon railway station",
+      "frequency": "Daily (4\u20135 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Friday",
+        "Saturday"
+      ],
+      "preferredTime": "17:30",
+      "flexibility": "Within 15 minutes of preferred time",
+      "connectingTrain": "Flexible",
+      "bufferRequired": "15-30 minutes",
+      "fallbackTransit": "Personal vehicle (Two-wheeler / Car)",
+      "allocationFactors": [
+        "Previous inconvenience or seat denial caused"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "24 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    },
+    {
+      "id": "RESP_07",
+      "accommodation": "Off Campus flat/private apartment",
+      "destination": "Talegaon railway station",
+      "frequency": "Daily (4\u20135 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "preferredTime": "18:00",
+      "flexibility": "Within 15 minutes of preferred time",
+      "connectingTrain": "18:45 PM Talegaon Local",
+      "bufferRequired": "10-15 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "First-come, first-served order"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "2\u20134 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    },
+    {
+      "id": "RESP_08",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Frequently (2\u20133 days a week)",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "Various slots across day",
+      "flexibility": "Within 30 minutes of preferred time",
+      "connectingTrain": "Local transit",
+      "bufferRequired": "15-30 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "Fixed connecting transit",
+        "Strict arrival deadline",
+        "Alternative bus availability",
+        "Total wait time",
+        "Previous inconvenience or seat denial",
+        "Booking time",
+        "FCFS order",
+        "Health needs",
+        "Academic year"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "30 minutes before departure",
+      "fairestSystem": "Equity-Weighted: Dynamic points system"
+    },
+    {
+      "id": "RESP_09",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Occasionally (1\u20132 times a month)",
+      "daysNeeded": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "08:00 AM",
+      "flexibility": "Fixed (Cannot accept any time slot other than requested)",
+      "connectingTrain": "08:53 AM",
+      "bufferRequired": "10-15 minutes",
+      "fallbackTransit": "Wait for subsequent official campus bus",
+      "allocationFactors": [
+        "Strict arrival deadline",
+        "Alternative bus availability",
+        "Booking time"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "30 minutes before departure",
+      "fairestSystem": "Equity-Weighted: Dynamic points system"
+    },
+    {
+      "id": "RESP_10",
+      "accommodation": "Campus Hostel",
+      "destination": "Talegaon railway station",
+      "frequency": "Frequently (2\u20133 days a week)",
+      "daysNeeded": [
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "preferredTime": "17:30",
+      "flexibility": "Within 15 minutes of preferred time",
+      "connectingTrain": "18:15",
+      "bufferRequired": "15-30 minutes",
+      "fallbackTransit": "Private auto-rickshaw / cab sharing",
+      "allocationFactors": [
+        "Alternative bus availability",
+        "Booking time",
+        "FCFS order"
+      ],
+      "wantsExplanation": "Yes (Full transparency)",
+      "finalizationLeadTime": "2\u20134 hours before departure",
+      "fairestSystem": "Pure Speed: First-Come, First-Served"
+    }
+  ],
+  "summary": {
+    "sampleSize": 10,
+    "accommodationDist": {
+      "Hostel": 60.0,
+      "OffCampus": 40.0
+    },
+    "flexibilityDist": {
+      "Fixed": 20.0,
+      "Within15Min": 40.0,
+      "Within30Min": 40.0
+    },
+    "bufferRequiredDist": {
+      "10_15_mins": 50.0,
+      "15_30_mins": 50.0
+    },
+    "wantsExplanationDist": {
+      "Yes": 80.0,
+      "Maybe": 10.0,
+      "No": 10.0
+    },
+    "fairestSystemDist": {
+      "PureSpeedFCFS": 60.0,
+      "EquityWeightedPoints": 40.0
+    },
+    "fallbackModes": {
+      "CabAutoSharing": 70.0,
+      "PersonalVehicle": 20.0,
+      "NextCampusBus": 10.0
+    }
+  }
+}

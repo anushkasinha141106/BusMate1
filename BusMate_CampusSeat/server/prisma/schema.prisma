@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  password     String
+  name         String
+  phone        String?
+  role         String        @default("passenger") // "passenger", "agent", "admin"
+  agencyName   String?
+  bookings     Booking[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@map("users")
+}
+
+model Route {
+  id           String        @id @default(uuid())
+  routeCode    String        @unique // e.g., "LINE_SWAR_STN", "LINE_PUN_TALE"
+  routeName    String        // e.g., "Swargate ⇄ Pune Railway Station"
+  origin       String
+  destination  String
+  distanceKm   Float
+  estimatedMin Int
+  baseFare     Float
+  trips        Trip[]
+  createdAt    DateTime      @default(now())
+
+  @@map("routes")
+}
+
+model Trip {
+  id             String      @id @default(uuid())
+  tripCode       String      @unique // e.g., "TRIP_0815_EXP"
+  routeCode      String
+  route          Route       @relation(fields: [routeCode], references: [routeCode], onDelete: Cascade)
+  operatorName   String      // e.g., "PMPML Pune Pride Express", "MSRTC Shivneri Volvo AC"
+  busCategory    String      // "AC Sleeper 2+1", "Volvo Multi-Axle AC", "Standard Express 2+2"
+  busNumber      String      // e.g., "MH-12-RN-8812"
+  departureTime  String      // "06:30"
+  arrivalTime    String      // "07:45"
+  duration       String      // "1h 15m"
+  departureDate  String      // "YYYY-MM-DD"
+  baseFare       Float
+  totalSeats     Int         @default(40)
+  ratings        Float       @default(4.6)
+  reviewsCount   Int         @default(128)
+  amenities      String      // Comma separated or JSON: "WiFi,Charging Point,Water Bottle,Reading Light"
+  bookedSeats    String      @default("[]") // JSON string array of booked seat IDs e.g. '["1A", "2B"]'
+  seatHolds      SeatHold[]
+  bookings       Booking[]
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@map("trips")
+}
+
+model SeatHold {
+  id            String       @id @default(uuid())
+  holdId        String       @unique
+  tripId        String
+  trip          Trip         @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  seats         String       // JSON array of seat strings: '["3A", "3B"]'
+  boardingPoint String?
+  droppingPoint String?
+  tripPurpose            String?      @default("GENERAL_LEISURE")
+  priorityScore          Int?         @default(15)
+  isFlexible             Boolean?     @default(false)
+  flexibleWindowMinutes  Int?         @default(0)
+  flexibilityDirection   String?      @default("ANY") // "ANY", "EARLIER_ONLY", "LATER_ONLY"
+  expiresAt              DateTime
+  createdAt              DateTime     @default(now())
+
+  @@map("seat_holds")
+}
+
+model Booking {
+  id                     String    @id @default(uuid())
+  pnr                    String    @unique
+  tripId                 String
+  trip                   Trip      @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  userId                 String?
+  user                   User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  passengerDetails       String    // JSON string of passenger objects
+  tripPurpose            String?   @default("GENERAL_LEISURE") // MEDICAL, EDUCATION_EXAM, WORK_COMMUTE, GENERAL_LEISURE
+  priorityScore          Int?      @default(15)
+  isPrioritySeat         Boolean?  @default(false)
+  isFlexible             Boolean?  @default(false)
+  flexibleWindowMinutes  Int?         @default(0)
+  flexibilityDirection   String?      @default("ANY") // "ANY", "EARLIER_ONLY", "LATER_ONLY"
+  wasReallocated         Boolean?  @default(false)
+  reallocatedBus         String?
+  contactEmail           String
+  contactPhone           String
+  boardingPoint          String
+  droppingPoint          String
+  selectedSeats          String    // JSON string array e.g. '["3A", "3B"]'
+  fareBreakdown          String    // JSON string of fare calculations
+  totalAmount            Float
+  paymentMethod          String    // "UPI", "CARD", "NETBANKING"
+  paymentStatus          String    @default("PAID") // "PAID", "REFUNDED", "PENDING"
+  status                 String    @default("CONFIRMED") // "CONFIRMED", "CANCELLED", "REALLOCATED"
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+
+  @@map("bookings")
+}

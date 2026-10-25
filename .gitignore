@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+.venv/
+__pycache__/
+BusMate_CityFlow/outputs/run_*/
+BUS_DATA_*
+BusRoutes.pickle
+BusStopList.csv
+DistanceMatrix.csv
+*.zip
+*.pickle
+BusMate_CityFlow/BUS_DATA_MAR_2018.csv
+BusMate_CityFlow/BusStopList.csv
+BusMate_CityFlow/DistanceMatrix.csv

@@ -1,0 +1,463 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --a11y-font-scale: 1;
+  --a11y-line-height: 1.5;
+  --a11y-saturation: 100%;
+}
+
+@layer base {
+  html {
+    font-size: calc(100% * var(--a11y-font-scale, 1));
+    line-height: var(--a11y-line-height, 1.5);
+    filter: saturate(var(--a11y-saturation, 100%));
+    background-color: #F8FAFC;
+    color: #0f172a;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: #0f172a;
+    background-color: #F8FAFC;
+    font-feature-settings: 'cv02' on, 'cv03' on, 'cv04' on, 'cv11' on;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    color: #0f172a;
+    letter-spacing: -0.018em;
+  }
+
+  /* Tabular Figures for aligned clocks, prices, and metrics */
+  .tabular-nums,
+  [data-tnum="true"] {
+    font-feature-settings: 'tnum' on, 'cv05' on;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible Focus Rings (WCAG 2.4.7 Focus Visible, 2.4.11 Focus Appearance) */
+  :focus-visible {
+    outline: 3px solid #075985 !important;
+    outline-offset: 3px !important;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Standardized Typographic Scale & Hierarchy */
+  .typo-hero {
+    font-size: clamp(2rem, 3.5vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    font-family: var(--font-heading);
+  }
+
+  .typo-section {
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    color: #0f172a;
+    font-family: var(--font-heading);
+  }
+
+  .typo-entity {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #0f172a;
+  }
+
+  .typo-clock {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #0f172a;
+    font-feature-settings: 'tnum' on, 'cv05' on;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .typo-price {
+    font-size: clamp(1.25rem, 1.8vw, 1.375rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+    font-feature-settings: 'tnum' on, 'cv05' on;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .typo-body {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #475569;
+  }
+
+  .typo-secondary {
+    font-size: 0.84375rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #475569;
+  }
+
+  .typo-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  /* 1. Ambient Background & Visual Effects */
+  .bg-mesh-aurora {
+    background: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
+                #f8fafc;
+  }
+
+  .bg-transit-grid {
+    background-image: radial-gradient(rgba(100, 116, 139, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Modern Glassmorphic Search Container */
+  .glass-search-ribbon {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  /* Interactive Bus Result Card with Lift & Border Glow */
+  .bus-card-interactive {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bus-card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -10px rgba(15, 23, 42, 0.10), 0 6px 12px -6px rgba(15, 23, 42, 0.05);
+    border-color: rgba(56, 189, 248, 0.55);
+  }
+}
+
+/* 2. Text Spacing: A ↔ */
+html.a11y-text-spacing,
+html.a11y-text-spacing * {
+  letter-spacing: 0.14em !important;
+  word-spacing: 0.25em !important;
+}
+
+/* 4. Dyslexia Friendly: Df */
+html.a11y-dyslexia,
+html.a11y-dyslexia * {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 6. Saturation Control: 💧 */
+html.a11y-monochrome {
+  filter: grayscale(100%) !important;
+}
+html.a11y-high-saturation {
+  filter: saturate(200%) !important;
+}
+
+/* 7. High Contrast Mode: 🌙 */
+html.a11y-high-contrast {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+}
+html.a11y-high-contrast body {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+}
+html.a11y-high-contrast div,
+html.a11y-high-contrast section,
+html.a11y-high-contrast header,
+html.a11y-high-contrast footer,
+html.a11y-high-contrast aside,
+html.a11y-high-contrast article,
+html.a11y-high-contrast main,
+html.a11y-high-contrast nav {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+  border-color: #FACC15 !important;
+}
+html.a11y-high-contrast input,
+html.a11y-high-contrast select,
+html.a11y-high-contrast textarea {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+html.a11y-high-contrast :focus-visible {
+  outline: 4px solid #FACC15 !important;
+  outline-offset: 4px !important;
+}
+
+/* 8. Invert Colors: 🌓 */
+html.a11y-inverted {
+  filter: invert(100%) hue-rotate(180deg);
+}
+html.a11y-inverted img,
+html.a11y-inverted video,
+html.a11y-inverted svg,
+html.a11y-inverted iframe {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* 9. Link Highlighter: 🔗 */
+html.a11y-link-highlight a,
+html.a11y-link-highlight button:not([data-a11y-engine]) {
+  background-color: #FEF08A !important;
+  color: #000000 !important;
+  text-decoration: underline !important;
+  font-weight: 800 !important;
+}
+
+/* 11. High-Visibility Cursor: ⟲ ↗ */
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="%23000000" stroke="%23FFFFFF" stroke-width="2"><path d="M4 4l7 17 2-7 7-2L4 4z"/></svg>'), auto !important;
+}
+
+/* 12. Animation Freeze: ⏸ */
+html.a11y-freeze-animations *,
+html.a11y-freeze-animations *::before,
+html.a11y-freeze-animations *::after {
+  animation-play-state: paused !important;
+  animation-duration: 0.001ms !important;
+  transition: none !important;
+}
+
+/* 13. Image Suppressor: ⧄ */
+html.a11y-hide-images img,
+html.a11y-hide-images video,
+html.a11y-hide-images [style*="background-image"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Fitts's Law: Enforce Minimum 44x44px Touch Target Size on Interactive Elements */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Skip link for screen readers & keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #075985;
+  color: #ffffff;
+  padding: 0.875rem 1.5rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  z-index: 9999;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 2px solid #ffffff;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* Custom accessible scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #075985;
+}
+
+/* ========================================================
+   ACCESSIBILITY: LEFT-HAND ERGONOMIC REACH & LAYOUT INVERSION
+   Optimizes primary CTAs, search actions, and mobile sticky bars
+   for left-hand thumb reach and one-handed operation.
+   ======================================================== */
+
+/* 1. Mobile Bottom Navigation & Sticky Booking Bars */
+.a11y-left-hand .sticky-booking-bar,
+html.a11y-left-hand .sticky-booking-bar {
+  flex-direction: row-reverse !important;
+}
+
+/* 2. Floating A11y Badge: Shift from bottom-right to bottom-left */
+.a11y-left-hand .a11y-floating-badge,
+.a11y-left-hand #a11y-floating-badge,
+html.a11y-left-hand .a11y-floating-badge,
+html.a11y-left-hand #a11y-floating-badge {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+/* 3. Search Ribbon: Align primary SEARCH BUSES CTA to the left thumb zone */
+@media (min-width: 768px) {
+  .a11y-left-hand .search-ribbon-form,
+  html.a11y-left-hand .search-ribbon-form {
+    flex-direction: row-reverse !important;
+  }
+
+  .a11y-left-hand .search-ribbon-form .search-buses-btn,
+  html.a11y-left-hand .search-ribbon-form .search-buses-btn {
+    border-radius: 1.5rem 0 0 1.5rem !important;
+  }
+
+  .a11y-left-hand .search-ribbon-form .from-segment,
+  html.a11y-left-hand .search-ribbon-form .from-segment {
+    border-radius: 0 1.5rem 1.5rem 0 !important;
+    border-right: none !important;
+    border-left: 1px solid rgba(226, 232, 240, 0.8) !important;
+  }
+}
+
+/* 4. Bus Search Results Cards:
+   Prioritize primary interaction (Select Seats / Book Now) on the left side */
+@media (min-width: 1024px) {
+  .a11y-left-hand .bus-results-header-bar,
+  html.a11y-left-hand .bus-results-header-bar {
+    direction: rtl !important;
+  }
+
+  .a11y-left-hand .bus-results-header-bar > *,
+  html.a11y-left-hand .bus-results-header-bar > * {
+    direction: ltr !important;
+  }
+
+  .a11y-left-hand .bus-card-interactive .bus-card-grid,
+  html.a11y-left-hand .bus-card-interactive .bus-card-grid {
+    direction: rtl !important;
+  }
+
+  .a11y-left-hand .bus-card-interactive .bus-card-grid > *,
+  html.a11y-left-hand .bus-card-interactive .bus-card-grid > * {
+    direction: ltr !important;
+  }
+}
+
+/* Mobile & Tablet Results Cards: Primary CTA aligned to left thumb zone */
+@media (max-width: 1023px) {
+  .a11y-left-hand .bus-card-interactive .card-action-zone,
+  html.a11y-left-hand .bus-card-interactive .card-action-zone {
+    justify-content: flex-start !important;
+  }
+
+  .a11y-left-hand .bus-card-interactive .card-action-zone button,
+  html.a11y-left-hand .bus-card-interactive .card-action-zone button {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+  }
+
+  .a11y-left-hand .bus-card-interactive .card-pricing-zone,
+  html.a11y-left-hand .bus-card-interactive .card-pricing-zone {
+    text-align: left !important;
+  }
+
+  .a11y-left-hand .bus-card-interactive .card-pricing-zone > div,
+  html.a11y-left-hand .bus-card-interactive .card-pricing-zone > div {
+    justify-content: flex-start !important;
+  }
+}
+
+/* 5. Mobile Search Form & Date Chips */
+.a11y-left-hand .quick-date-chips,
+html.a11y-left-hand .quick-date-chips {
+  justify-content: flex-start !important;
+}
+
+/* 6. Seat Selection Modal & Checkout Actions:
+   Shift primary action button and selection summary for left hand */
+.a11y-left-hand .deck-picker-summary-card,
+html.a11y-left-hand .deck-picker-summary-card {
+  flex-direction: row-reverse !important;
+}
+
+.a11y-left-hand .deck-picker-cta-button,
+html.a11y-left-hand .deck-picker-cta-button {
+  flex-direction: row-reverse !important;
+}
+
+/* ========================================================
+   3. PRINT & PDF EXPORT STYLESHEET (@media print)
+   Standard A4 single-page layout hiding navbars, footers, & widgets
+   ======================================================== */
+@media print {
+  @page {
+    margin: 1.2cm;
+    size: A4 portrait;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, 
+  nav, 
+  footer, 
+  [role="banner"], 
+  [role="contentinfo"],
+  .a11y-trigger, 
+  .no-print, 
+  .print\\:hidden,
+  .skip-to-content,
+  #a11y-floating-badge,
+  #adhd-reading-mask,
+  .bg-mesh-aurora,
+  .bg-transit-grid {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ticket-container {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #ffffff !important;
+  }
+}
+
