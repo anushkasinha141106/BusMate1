@@ -16,6 +16,7 @@ const secret = process.env.JWT_SECRET
 if (!secret || secret.length < 32) throw new Error('JWT_SECRET must be set and at least 32 characters long')
 
 const app = express()
+app.set('trust proxy', 1)
 app.disable('x-powered-by')
 app.use(helmet())
 app.use(express.json({ limit: '8kb' }))
