@@ -60,6 +60,4 @@ app.get('/api/d2/:file', authenticate, async (req, res) => {
 })
 app.use((_req, res) => res.sendStatus(404))
 
-const port = Number(process.env.PORT || 5180)
-const host = process.env.HOST || '127.0.0.1'
-app.listen(port, host, () => console.log(`CityFlow API listening on ${host}:${port}`))
+export default app
