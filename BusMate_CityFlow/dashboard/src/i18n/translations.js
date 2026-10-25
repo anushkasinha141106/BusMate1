@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     appName: 'CityFlow',
-    dashboard1: 'CampusSeat (Dashboard 1)',
+    campusSeat: 'CampusSeat',
     modelData: 'Model & data',
     comparison: 'Model comparison',
     current: 'Compare with current',

@@ -8,13 +8,13 @@ import ChartPanel from './components/ChartPanel.jsx'
 import RiskBadge from './components/RiskBadge.jsx'
 
 const URLS = {
-  metrics: '/d2/metrics.json',
-  forecasts: '/d2/forecast_sample.json',
-  plans: '/d2/plans.json',
-  routes: '/d2/routes.json',
-  tradeoff: '/d2/tradeoff.json',
-  decisions: '/d2/decision_metrics.json',
-  rolling: '/d2/rolling_metrics.json',
+  metrics: '/api/d2/metrics.json',
+  forecasts: '/api/d2/forecast_sample.json',
+  plans: '/api/d2/plans.json',
+  routes: '/api/d2/routes.json',
+  tradeoff: '/api/d2/tradeoff.json',
+  decisions: '/api/d2/decision_metrics.json',
+  rolling: '/api/d2/rolling_metrics.json',
 }
 const NUM = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 })
 const PCT = (v) => `${(Number(v) * 100).toFixed(2)}%`
@@ -27,6 +27,7 @@ function useDashboardData() {
     let live = true
     Promise.all(Object.entries(URLS).map(async ([key, url]) => {
       const response = await fetch(url)
+      if (response.status === 401) window.dispatchEvent(new Event('cityflow-unauthorized'))
       if (!response.ok) throw new Error(`${url}: ${response.status}`)
       return [key, await response.json()]
     })).then((entries) => { if (live) setData(Object.fromEntries(entries)) })
@@ -74,7 +75,7 @@ function Navbar({ onAccess }) {
   const links = [['/model', 'modelData'], ['/comparison', 'comparison'], ['/current', 'current']]
   return <header className="site-header" role="banner"><div className="nav-inner">
     <Link to="/model" className="brand" aria-label="CityFlow home"><span className="brand-mark"><BusFront size={23} aria-hidden="true" /></span>
-      <span className="brand-copy"><strong>CityFlow</strong><small>BUSMATE · DASHBOARD 2</small></span></Link>
+      <span className="brand-copy"><strong>CityFlow</strong></span></Link>
     <button className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen((v) => !v)}>{menuOpen ? <X /> : <Menu />}</button>
     <nav className={`main-nav ${menuOpen ? 'nav-open' : ''}`} aria-label="CityFlow navigation">
       {links.map(([to, key]) => <NavLink key={to} to={to} onClick={() => setMenuOpen(false)} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>{t(key)}</NavLink>)}
@@ -83,14 +84,14 @@ function Navbar({ onAccess }) {
       <label className="language-control"><Globe2 size={16} aria-hidden="true" /><span className="sr-only">Language</span>
         <select aria-label="Language" value={language} onChange={(e) => setLanguage(e.target.value)}><option value="en">English</option><option value="hi">Hindi</option><option value="mr">Marathi</option></select></label>
       <button className="access-button" onClick={onAccess}><Accessibility size={17} aria-hidden="true" /><span>Accessibility</span></button>
-      <a className="campus-link" href={import.meta.env.VITE_CAMPUSEAT_URL || 'http://localhost:5173/'} target="_blank" rel="noreferrer">CampusSeat <span>(Dashboard 1)</span><ArrowUpRight size={14} aria-hidden="true" /></a>
+      <a className="campus-link" href={import.meta.env.VITE_CAMPUSEAT_URL || 'http://localhost:5173/'} target="_blank" rel="noreferrer">CampusSeat <ArrowUpRight size={14} aria-hidden="true" /></a>
     </div>
   </div></header>
 }
 
 function Footer() {
   return <footer className="site-footer" role="contentinfo"><div className="footer-inner">
-    <div className="footer-brand"><span className="brand-mark"><BusFront size={20} /></span><div><strong>CityFlow</strong><small>BusMate · Dashboard 2</small></div></div>
+    <div className="footer-brand"><span className="brand-mark"><BusFront size={20} /></span><div><strong>CityFlow</strong></div></div>
     <p>Scenario planning prototype · assumptions shown with results</p>
     <div className="footer-status"><CheckCircle2 size={16} aria-hidden="true" /><span>Static evaluation data loaded</span></div>
   </div><div className="footer-bottom">Observed UrbanBus data, scenario-mapped to Pune corridor names.</div></footer>
@@ -272,4 +273,42 @@ function DashboardApp() {
   </Routes><p className="language-note">{translate(language,'languageNote')}</p><span className="sr-only">{title}</span></Layout>
 }
 
-export default DashboardApp
+function LoginPage({ onLogin }) {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
+  async function submit(event) {
+    event.preventDefault(); setBusy(true); setError('')
+    try {
+      const response = await fetch('/api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify({ username, password }) })
+      const body = await response.json()
+      if (!response.ok) throw new Error(body.error || 'Invalid username or password')
+      onLogin(body)
+    } catch (err) { setError(err.message || 'Unable to sign in') }
+    finally { setBusy(false) }
+  }
+  return <main className="login-page" id="main-content"><section className="login-card" aria-labelledby="login-title">
+    <div className="brand-mark"><BusFront size={24} aria-hidden="true" /></div><p className="eyebrow">BUSMATE · CITYFLOW</p>
+    <h1 id="login-title">Authorised access</h1><p>CityFlow is for authorised bus planners only.</p>
+    <form onSubmit={submit}><label>Username<input autoComplete="username" required value={username} onChange={(e) => setUsername(e.target.value)} /></label>
+      <label>Password<input type="password" autoComplete="current-password" required value={password} onChange={(e) => setPassword(e.target.value)} /></label>
+      {error && <p className="login-error" role="alert">{error}</p>}
+      <button className="button primary full-width" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
+    </form></section></main>
+}
+
+function SessionApp() {
+  const [session, setSession] = useState(undefined)
+  useEffect(() => {
+    const unauthorized = () => setSession(null)
+    window.addEventListener('cityflow-unauthorized', unauthorized)
+    fetch('/api/auth/me', { credentials: 'same-origin' }).then((r) => r.ok ? r.json() : null).then(setSession).catch(() => setSession(null))
+    return () => window.removeEventListener('cityflow-unauthorized', unauthorized)
+  }, [])
+  if (session === undefined) return <main className="login-page" role="status">Checking access…</main>
+  if (!session) return <LoginPage onLogin={setSession} />
+  return <><div className="session-bar"><span>Signed in as <strong>{session.username}</strong></span><button className="button secondary" onClick={async () => { await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' }); setSession(null) }}>Logout</button></div><DashboardApp /></>
+}
+
+export default SessionApp
