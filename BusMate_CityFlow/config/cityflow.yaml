@@ -1,0 +1,72 @@
+# FROZEN at tag cf-config-v1
+service_hours:
+  start: 5
+  end: 22
+  inclusive: true
+  hours: 18
+
+bus_capacity_K: 60
+comfort_load_L: 0.90
+
+# Planning assumptions; these cycle times are not measured values.
+cycle_time_min:
+  P01: 75
+  P02: 70
+  P03: 65
+  P04: 80
+  P05: 55
+  P06: 50
+  P07: 45
+  P08: 60
+
+# Scenario labels only; spelling is final.
+corridors:
+  P01: {name: "Swargate - Hinjewadi", type: trunk}
+  P02: {name: "Hadapsar - Pune Station", type: trunk}
+  P03: {name: "Katraj - Swargate", type: trunk}
+  P04: {name: "Nigdi - Pune Station", type: trunk}
+  P05: {name: "Kothrud - Deccan", type: mixed}
+  P06: {name: "Vishrantwadi - Shivajinagar", type: mixed}
+  P07: {name: "Kharadi - Pune Station", type: mixed}
+  P08: {name: "Pimpri - Hinjewadi", type: feeder}
+mapping_note: "scenario-mapped; not checked against PMPML route data"
+
+departures:
+  min: 1
+  max_primary: 30
+  max_sweep: [12, 20, 30]
+
+weights:
+  w_wait: 1.0
+  w_over_primary: 10
+  w_over_sweep: [5, 10, 20]
+  w_op_unit: "per bus-hour (x * T / 60)"
+  w_op_rule: "calibrate on TRAIN days only so at most 10% of train route-hours sit at max departures"
+  w_op_sweep: [20, 60, 100, 200, 400]
+
+fleet:
+  rule: "per-hour constraint sum_r x*T_r/60 <= F"
+  F: "ceil(tau * peak buses of the unconstrained fixed plan)"
+  tau_primary: 0.90
+  tau_sweep: [1.0, 0.95, 0.9, 0.85, 0.8, 0.7]
+
+interval:
+  level: 0.80
+  method: split_conformal_cqr
+
+splits:
+  legacy: "chronological 60/20/20"
+  protocolB:
+    calibration: "19-24 Mar"
+    final_test: "25-31 Mar"
+
+seeds: [42, 43, 44]
+pool_size: 40
+
+# Reference only; use Dashboard 1 design tokens when building CityFlow.
+design_reference:
+  brandPrimary: "#075985"
+  brandSecondary: "#0F766E"
+  background: "#F8FAFC"
+  text: "#172033"
+  notices: ["sky-50", "sky-100"]

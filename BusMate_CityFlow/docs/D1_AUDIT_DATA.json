@@ -1,0 +1,64 @@
+{
+  "run_id": "run_a8cf3cd_8579f421e8a50501e815512adf51b7e0d91d94a1d3ea13bf8f5e5c381453e95f",
+  "git_commit": "a8cf3cd5b8aac2b1516d876bf7afac2a26cc008c",
+  "config_hash": "8579f421e8a50501e815512adf51b7e0d91d94a1d3ea13bf8f5e5c381453e95f",
+  "status": "success",
+  "chunks": [
+    {
+      "file": "index.html",
+      "size": "1.02",
+      "unit": "kB",
+      "gzip_size": "0.55",
+      "gzip_unit": "kB"
+    },
+    {
+      "file": "assets/index-CH7jHk_Y.css",
+      "size": "83.85",
+      "unit": "kB",
+      "gzip_size": "14.26",
+      "gzip_unit": "kB"
+    },
+    {
+      "file": "assets/index-DTfLa0i4.js",
+      "size": "1,557.05",
+      "unit": "kB",
+      "gzip_size": "286.14",
+      "gzip_unit": "kB"
+    }
+  ],
+  "build_modules_transformed": 2457,
+  "build_seconds": "4.36",
+  "npm_packages_added": 284,
+  "npm_packages_audited": 285,
+  "npm_vulnerabilities": {
+    "total": 12,
+    "moderate": 6,
+    "high": 6
+  },
+  "source_hash_algorithm": "SHA-256",
+  "source_hashes": {
+    "TopAccessibilityBar": "17444760693433DF9DA0C2170C8EAC0226B467F8C8D4438EC2E460834DAA33AA",
+    "A11yModal": "C030F88B4733A092A09B51453BAAD0D7077579BBEDF5085A2E94CB9CDC0E27A9",
+    "A11yFloatingBadge": "9776127888C91AA4AF8FDC265257D6C176818206297FF21CE8DF3D2C3674DA1B",
+    "AdhdReadingMask": "24695AAD5A6FCE30228106DD244BBD289D7CEDC224821B0F18C43F7EF9107612",
+    "ErrorBoundary": "E1A46F0233DB41E8B8D225C5252988FFED68F736150AB35B5CA42A8B8B976293",
+    "AccessibilityContext": "9E579A42152362B80CB009D1621D674C465A36A682747CC8FF89C429443ED2E0",
+    "TranslationContext": "3BEEDEA0993C1D542876D69FC73487758CF5F3A45FC07FDDBCE25E54BC450BA5",
+    "tailwind.config.js": "E007D9489D55CD126FD9CC04B4F2DE37D9807FDF98903119E9DFD0D6E1FF1F6E",
+    "postcss.config.js": "190C877DB466995BF1482F4A16ABD06E04A89EDE3119341E2A86FF96E1737B27",
+    "src/index.css": "2C9DFFBB6177CC351E83E790C2E38A8357C2583F94BE1B683093A3702CA1DECF",
+    "index.html": "7B2FF49F0C946B25757CDD5F2605C4169D65D8D78B399F182FC91CD31F82A238"
+  },
+  "warnings": [
+    "npm warn deprecated recharts@2.15.4: 1.x and 2.x branches are no longer active. Bump to Recharts v3 to receive latest features and bugfixes. See https://github.com/recharts/recharts/wiki/3.0-migration-guide",
+    "npm warn install-scripts 4 packages have install scripts not yet covered by allowScripts:",
+    "npm warn install-scripts   @prisma/client@6.19.3 (postinstall: node scripts/postinstall.js)",
+    "npm warn install-scripts   @prisma/engines@6.19.3 (postinstall: node scripts/postinstall.js)",
+    "npm warn install-scripts   esbuild@0.21.5 (postinstall: node install.js)",
+    "npm warn install-scripts   prisma@6.19.3 (preinstall: node scripts/preinstall-entry.js)",
+    "npm warn install-scripts",
+    "npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.",
+    "(!) Some chunks are larger than 500 kB after minification. Consider:",
+    "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit."
+  ]
+}
