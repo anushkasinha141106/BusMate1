@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #f8fafc; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, a { font: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid #075985; outline-offset: 4px; border-radius: 7px; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.skip-link { position: fixed; z-index: 10; top: -5rem; left: 1rem; padding: .7rem 1rem; border-radius: .6rem; background: #075985; color: white; font-weight: 700; }
+.skip-link:focus { top: 1rem; }
+.topbar { min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem clamp(1rem, 5vw, 4rem); border-bottom: 1px solid #dbe4ed; background: white; }
+.brand { display: inline-flex; align-items: center; gap: .72rem; text-decoration: none; }
+.brand-mark { display: grid; place-items: center; width: 43px; height: 43px; color: white; border-radius: 13px; background: #075985; }
+.brand strong { display: block; font: 800 1.3rem "Plus Jakarta Sans", Inter, system-ui, sans-serif; }
+.brand small { display: block; margin-top: .18rem; color: #0f766e; font-size: .62rem; font-weight: 800; letter-spacing: .1em; }
+.access-tools { display: flex; gap: .5rem; }
+.access-tools button { display: inline-flex; align-items: center; gap: .45rem; min-height: 42px; padding: .45rem .75rem; border: 1px solid #cbd5e1; border-radius: .7rem; background: white; color: #334155; cursor: pointer; }
+.access-tools button:hover, .access-tools button[aria-pressed="true"] { border-color: #075985; color: #075985; background: #eff6ff; }
+.content { width: min(1120px, 100%); margin: auto; padding: clamp(2.6rem, 8vh, 5.5rem) 1.5rem; }
+.intro { margin: 0 0 2rem; text-align: center; }
+.eyebrow { margin: 0 0 .5rem; color: #0f766e; font-size: .7rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+h1, h2 { font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif; letter-spacing: -.025em; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; }
+.subtitle { max-width: 680px; margin: .8rem auto 0; color: #475569; font-size: 1.05rem; line-height: 1.6; }
+.tool-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+.tool-card { display: flex; flex-direction: column; min-height: 365px; padding: 1.5rem; border: 1px solid #dbe4ed; border-radius: 1.2rem; background: white; box-shadow: 0 8px 26px #0f172a0a; }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.3rem; }
+.tool-icon { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 15px; color: #075985; background: #e0f2fe; }
+.city .tool-icon { color: #0f766e; background: #ccfbf1; }
+.plain-status { display: inline-flex; align-items: center; gap: .4rem; color: #475569; font-size: .78rem; font-weight: 700; }
+.status-dot { color: #0f766e; font-size: .72rem; }
+.tool-card h2 { margin: 0; font-size: 1.8rem; }
+.description { margin: .7rem 0 .35rem; color: #334155; line-height: 1.6; }
+.detail { margin: .25rem 0 1.3rem; color: #64748b; font-size: .9rem; line-height: 1.55; }
+.launch-link { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: auto; min-height: 48px; padding: .7rem .9rem; border-radius: .75rem; background: #075985; color: white; font-weight: 750; text-decoration: none; }
+.launch-link:hover { background: #0c4a6e; }
+.city .launch-link { background: #0f766e; }
+.city .launch-link:hover { background: #115e59; }
+.origin-note { display: flex; justify-content: center; align-items: center; gap: .45rem; margin: 1.2rem 0 0; color: #475569; font-size: .84rem; text-align: center; }
+.footer { display: flex; align-items: flex-start; justify-content: center; gap: .65rem; padding: 1.2rem 1.5rem; border-top: 1px solid #dbe4ed; background: white; }
+.footer p { max-width: 920px; margin: 0; color: #475569; font-size: .82rem; line-height: 1.55; }
+.footer-mark { color: #075985; }
+html[data-large="true"] { font-size: 112%; }
+html[data-contrast="true"] { filter: contrast(1.25); }
+@media (max-width: 680px) { .topbar { padding-inline: 1rem; } .access-tools button span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; } .tool-grid { grid-template-columns: 1fr; } .tool-card { min-height: 330px; } .content { padding-top: 2.5rem; } .origin-note { align-items: flex-start; text-align: left; } .footer { justify-content: flex-start; } }

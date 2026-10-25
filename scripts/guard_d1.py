@@ -17,7 +17,7 @@ ALLOWED_FILES = {
     "scripts/guard_d1.py",
     "scripts/guard_d1.sh",
 }
-ALLOWED_PREFIXES = ("BusMate_CityFlow/",)
+ALLOWED_PREFIXES = ("BusMate_CityFlow/", "BusMate_Hub/")
 FROZEN_PREFIX = "BusMate_CampusSeat/"
 
 

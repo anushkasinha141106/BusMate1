@@ -1,6 +1,6 @@
 1. Work on branch cityflow/main. Dashboard 1 (BusMate_CampusSeat/) is frozen at git tag d1-baseline.
    No file under BusMate_CampusSeat/ may ever change, be added or be deleted.
-2. Allowed paths: BusMate_CityFlow/**, AGENTS.md, Makefile, scripts/guard_d1.py, scripts/guard_d1.sh.
+2. Allowed paths: BusMate_CityFlow/**, BusMate_Hub/**, AGENTS.md, Makefile, scripts/guard_d1.py, scripts/guard_d1.sh.
    Root .gitignore is append-only.
 3. Run `python scripts/guard_d1.py` before every commit. It must exit 0.
 4. No number may appear in the UI, README or reports unless it was read from a JSON file written
