@@ -2,7 +2,7 @@
   {
     "pune_id": "P01",
     "label": "Swargate - Hinjewadi",
-    "area": null,
+    "area": "Swargate / Hinjewadi IT Park",
     "type": "trunk",
     "source_route": "SER_1d28",
     "source_stats": {
@@ -14,7 +14,7 @@
   {
     "pune_id": "P02",
     "label": "Hadapsar - Pune Station",
-    "area": null,
+    "area": "Hadapsar / Pune Station",
     "type": "trunk",
     "source_route": "SER_8b94",
     "source_stats": {
@@ -26,7 +26,7 @@
   {
     "pune_id": "P03",
     "label": "Katraj - Swargate",
-    "area": null,
+    "area": "Katraj / Swargate",
     "type": "trunk",
     "source_route": "SER_49d1",
     "source_stats": {
@@ -38,7 +38,7 @@
   {
     "pune_id": "P04",
     "label": "Nigdi - Pune Station",
-    "area": null,
+    "area": "Nigdi, Pimpri / Pune Station",
     "type": "trunk",
     "source_route": "SER_108c",
     "source_stats": {
@@ -50,7 +50,7 @@
   {
     "pune_id": "P05",
     "label": "Kothrud - Deccan",
-    "area": null,
+    "area": "Kothrud / Deccan",
     "type": "mixed",
     "source_route": "SER_8722",
     "source_stats": {
@@ -62,7 +62,7 @@
   {
     "pune_id": "P06",
     "label": "Vishrantwadi - Shivajinagar",
-    "area": null,
+    "area": "Vishrantwadi / Shivajinagar",
     "type": "mixed",
     "source_route": "SER_031b",
     "source_stats": {
@@ -74,7 +74,7 @@
   {
     "pune_id": "P07",
     "label": "Kharadi - Pune Station",
-    "area": null,
+    "area": "Kharadi / Pune Station",
     "type": "mixed",
     "source_route": "SER_be47",
     "source_stats": {
@@ -86,7 +86,7 @@
   {
     "pune_id": "P08",
     "label": "Pimpri - Hinjewadi",
-    "area": null,
+    "area": "Pimpri / Hinjewadi",
     "type": "feeder",
     "source_route": "SER_f64c",
     "source_stats": {

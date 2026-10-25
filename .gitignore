@@ -22,3 +22,15 @@ BusMate_CityFlow/results_rolling/
 BusMate_CityFlow/results_optimiser/
 BusMate_CityFlow/results_optimiser_v2/
 BusMate_CityFlow/results_dashboard/
+
+# extra safety
+*.pickle
+*.zip
+.env
+users.json
+node_modules/
+dist/
+.venv/
+BusMate_CityFlow/data/hourly_*.csv
+BusMate_CityFlow/data/route_summary_*.csv
+BusMate_CityFlow/results_*/
