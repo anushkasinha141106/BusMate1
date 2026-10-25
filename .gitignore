@@ -19,3 +19,6 @@ BusMate_CityFlow/DistanceMatrix.csv
 BusMate_CityFlow/data/
 BusMate_CityFlow/results/
 BusMate_CityFlow/results_rolling/
+BusMate_CityFlow/results_optimiser/
+BusMate_CityFlow/results_optimiser_v2/
+BusMate_CityFlow/results_dashboard/
