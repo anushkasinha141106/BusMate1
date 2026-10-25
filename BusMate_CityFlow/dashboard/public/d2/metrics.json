@@ -1,0 +1,185 @@
+{
+  "fixed": {
+    "MAE": 106.60219704765022,
+    "RMSE": 160.85026754100244
+  },
+  "naive": {
+    "MAE": 110.2983193277311,
+    "RMSE": 160.3339196374695
+  },
+  "lgbm_point": {
+    "MAE": 95.88638391885723,
+    "RMSE": 135.30909650784952
+  },
+  "interval": {
+    "target_coverage": 0.8,
+    "empirical_coverage": 0.793967587034814,
+    "mean_width": 349.1586251270712
+  },
+  "decision": {
+    "fixed": {
+      "total_cost": 34214858.28316813,
+      "regret_vs_oracle": 4318962.710491788,
+      "share_fixed_to_oracle_regret_gap_closed": 0.0,
+      "overload_passengers": 289486.9999999999,
+      "crowded_route_hours": 2354,
+      "crowded_route_hour_share": 0.3532412965186074,
+      "average_wait_minutes_per_passenger": 0.8857293437399293,
+      "bus_hours": 305659.5,
+      "route_hours": 6664
+    },
+    "naive": {
+      "total_cost": 33944669.96137658,
+      "regret_vs_oracle": 4048774.3887002356,
+      "share_fixed_to_oracle_regret_gap_closed": 0.06255861416334998,
+      "overload_passengers": 265402.9999999999,
+      "crowded_route_hours": 2212,
+      "crowded_route_hour_share": 0.3319327731092437,
+      "average_wait_minutes_per_passenger": 0.8736654328392608,
+      "bus_hours": 308965.5,
+      "route_hours": 6664
+    },
+    "lgbm_point": {
+      "total_cost": 33346399.058608547,
+      "regret_vs_oracle": 3450503.485932205,
+      "share_fixed_to_oracle_regret_gap_closed": 0.2010805100145664,
+      "overload_passengers": 229386.99999999988,
+      "crowded_route_hours": 2119,
+      "crowded_route_hour_share": 0.3179771908763505,
+      "average_wait_minutes_per_passenger": 0.868252236172198,
+      "bus_hours": 308965.5,
+      "route_hours": 6664
+    },
+    "lgbm_robust": {
+      "total_cost": 31506065.056143895,
+      "regret_vs_oracle": 1610169.4834675528,
+      "share_fixed_to_oracle_regret_gap_closed": 0.6271860649419204,
+      "overload_passengers": 39296.99999999997,
+      "crowded_route_hours": 426,
+      "crowded_route_hour_share": 0.06392557022809124,
+      "average_wait_minutes_per_passenger": 0.794636145295279,
+      "bus_hours": 335968.5,
+      "route_hours": 6664
+    },
+    "oracle": {
+      "total_cost": 29895895.572676342,
+      "regret_vs_oracle": 0.0,
+      "share_fixed_to_oracle_regret_gap_closed": 1.0,
+      "overload_passengers": 4292.999999999972,
+      "crowded_route_hours": 389,
+      "crowded_route_hour_share": 0.0583733493397359,
+      "average_wait_minutes_per_passenger": 0.8738403922548875,
+      "bus_hours": 306955.5,
+      "route_hours": 6664
+    }
+  },
+  "wilcoxon_p_route_day_regret": {
+    "lgbm_point_vs_fixed": 0.00030023462011298925
+  },
+  "fleet_cap_buses": 649.5,
+  "fleet_cap_by_fold": {
+    "fold1": 642.0,
+    "fold2": 643.5,
+    "fold3": 645.0,
+    "fold4": 648.0,
+    "fold5": 649.5,
+    "fold6": 645.0,
+    "fold7": 643.5
+  },
+  "data": {
+    "source": "results_rolling/forecast_test.csv; data/hourly_janmar.csv training-period p99",
+    "routes": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "test_rows": 6664,
+    "horizon_h": 119,
+    "config": {
+      "service_hours_inclusive": [
+        5,
+        21
+      ],
+      "K": 60.0,
+      "L": 0.9,
+      "T_min": 90.0,
+      "w_wait": 1.0,
+      "w_over": 15.0,
+      "w_op": 100.0,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      }
+    },
+    "pune_scenario_mapping": true
+  },
+  "rolling": {
+    "fold1": {
+      "wape": {
+        "naive": 0.05956104061811477,
+        "fixed": 0.07131512546931892,
+        "model": 0.05957262114399194
+      },
+      "interval_coverage": 0.7804621848739496
+    },
+    "fold2": {
+      "wape": {
+        "naive": 0.056727900366375573,
+        "fixed": 0.06487563976704246,
+        "model": 0.05520779928911004
+      },
+      "interval_coverage": 0.8151260504201681
+    },
+    "fold3": {
+      "wape": {
+        "naive": 0.06191594629367615,
+        "fixed": 0.06196433587911037,
+        "model": 0.06022604378184889
+      },
+      "interval_coverage": 0.7647058823529411
+    },
+    "fold4": {
+      "wape": {
+        "naive": 0.0659494418705886,
+        "fixed": 0.056321927250857086,
+        "model": 0.05852382858247315
+      },
+      "interval_coverage": 0.7878151260504201
+    },
+    "fold5": {
+      "wape": {
+        "naive": 0.0885662913144478,
+        "fixed": 0.0778551443476474,
+        "model": 0.06546488280154956
+      },
+      "interval_coverage": 0.8014705882352942
+    },
+    "fold6": {
+      "wape": {
+        "naive": 0.09158596695473668,
+        "fixed": 0.06672487258848778,
+        "model": 0.06388599353262357
+      },
+      "interval_coverage": 0.773109243697479
+    },
+    "fold7": {
+      "wape": {
+        "naive": 0.05704051014752281,
+        "fixed": 0.06508789529343059,
+        "model": 0.05457189966580664
+      },
+      "interval_coverage": 0.8350840336134454
+    }
+  }
+}

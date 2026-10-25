@@ -1,0 +1,98 @@
+[
+  {
+    "pune_id": "P01",
+    "label": "Swargate - Hinjewadi",
+    "area": null,
+    "type": "trunk",
+    "source_route": "SER_1d28",
+    "source_stats": {
+      "training_boardings": 1582981,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P02",
+    "label": "Hadapsar - Pune Station",
+    "area": null,
+    "type": "trunk",
+    "source_route": "SER_8b94",
+    "source_stats": {
+      "training_boardings": 1553091,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P03",
+    "label": "Katraj - Swargate",
+    "area": null,
+    "type": "trunk",
+    "source_route": "SER_49d1",
+    "source_stats": {
+      "training_boardings": 1332737,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P04",
+    "label": "Nigdi - Pune Station",
+    "area": null,
+    "type": "trunk",
+    "source_route": "SER_108c",
+    "source_stats": {
+      "training_boardings": 1274065,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P05",
+    "label": "Kothrud - Deccan",
+    "area": null,
+    "type": "mixed",
+    "source_route": "SER_8722",
+    "source_stats": {
+      "training_boardings": 1271761,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P06",
+    "label": "Vishrantwadi - Shivajinagar",
+    "area": null,
+    "type": "mixed",
+    "source_route": "SER_031b",
+    "source_stats": {
+      "training_boardings": 1240721,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P07",
+    "label": "Kharadi - Pune Station",
+    "area": null,
+    "type": "mixed",
+    "source_route": "SER_be47",
+    "source_stats": {
+      "training_boardings": 1213002,
+      "combined_coverage_pct": 100.0
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  },
+  {
+    "pune_id": "P08",
+    "label": "Pimpri - Hinjewadi",
+    "area": null,
+    "type": "feeder",
+    "source_route": "SER_f64c",
+    "source_stats": {
+      "training_boardings": 14781,
+      "combined_coverage_pct": 95.294118
+    },
+    "mapping_note": "scenario-mapped: ranked on 2018-01-01..2018-02-10"
+  }
+]

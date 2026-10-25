@@ -1,0 +1,835 @@
+{
+  "protocol": "one parameter at a time; +/-25%; L upper-capped at 0.99; x_max recomputed per setting",
+  "runs": {
+    "K_45": {
+      "parameter": "K",
+      "value": 45.0,
+      "x_max_by_route": {
+        "SER_1d28": 115,
+        "SER_8b94": 116,
+        "SER_49d1": 93,
+        "SER_108c": 100,
+        "SER_8722": 126,
+        "SER_031b": 96,
+        "SER_be47": 99,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 850.5,
+          "F_departure_units": 567,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 567
+        },
+        "fold2": {
+          "F_buses": 855.0,
+          "F_departure_units": 570,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 570
+        },
+        "fold3": {
+          "F_buses": 859.5,
+          "F_departure_units": 573,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 573
+        },
+        "fold4": {
+          "F_buses": 862.5,
+          "F_departure_units": 575,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 575
+        },
+        "fold5": {
+          "F_buses": 859.5,
+          "F_departure_units": 573,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 573
+        },
+        "fold6": {
+          "F_buses": 858.0,
+          "F_departure_units": 572,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 572
+        },
+        "fold7": {
+          "F_buses": 856.5,
+          "F_departure_units": 571,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 571
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4631089.832965583,
+        "naive": 4380442.147426777,
+        "point": 3764055.4444642365,
+        "robust": 2435315.990038134,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.054122829523758194,
+        "point": 0.18722037787509913,
+        "robust": 0.47413760521275705
+      },
+      "point_crowded_route_hour_share": 0.3398859543817527,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 1.7232795127463532e-05,
+        "median_paired_difference": -794.8775566901459
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "K_75": {
+      "parameter": "K",
+      "value": 75.0,
+      "x_max_by_route": {
+        "SER_1d28": 69,
+        "SER_8b94": 70,
+        "SER_49d1": 56,
+        "SER_108c": 60,
+        "SER_8722": 76,
+        "SER_031b": 58,
+        "SER_be47": 60,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 516.0,
+          "F_departure_units": 344,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 344
+        },
+        "fold2": {
+          "F_buses": 517.5,
+          "F_departure_units": 345,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 345
+        },
+        "fold3": {
+          "F_buses": 519.0,
+          "F_departure_units": 346,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 346
+        },
+        "fold4": {
+          "F_buses": 519.0,
+          "F_departure_units": 346,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 346
+        },
+        "fold5": {
+          "F_buses": 520.5,
+          "F_departure_units": 347,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 347
+        },
+        "fold6": {
+          "F_buses": 519.0,
+          "F_departure_units": 346,
+          "fixed_busiest_timestamp": "2018-03-23 18:00:00",
+          "fixed_busiest_departures": 346
+        },
+        "fold7": {
+          "F_buses": 517.5,
+          "F_departure_units": 345,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 345
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 3943607.5388273075,
+        "naive": 3560962.9337362014,
+        "point": 3083875.9541493133,
+        "robust": 1034417.1919753738,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.09702907840694802,
+        "point": 0.21800637518145344,
+        "robust": 0.7376977344244114
+      },
+      "point_crowded_route_hour_share": 0.2845138055222089,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.00018154922823944883,
+        "median_paired_difference": -400.49052900804236
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "L_0.675": {
+      "parameter": "L",
+      "value": 0.675,
+      "x_max_by_route": {
+        "SER_1d28": 115,
+        "SER_8b94": 116,
+        "SER_49d1": 93,
+        "SER_108c": 100,
+        "SER_8722": 126,
+        "SER_031b": 96,
+        "SER_be47": 99,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 850.5,
+          "F_departure_units": 567,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 567
+        },
+        "fold2": {
+          "F_buses": 855.0,
+          "F_departure_units": 570,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 570
+        },
+        "fold3": {
+          "F_buses": 859.5,
+          "F_departure_units": 573,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 573
+        },
+        "fold4": {
+          "F_buses": 862.5,
+          "F_departure_units": 575,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 575
+        },
+        "fold5": {
+          "F_buses": 859.5,
+          "F_departure_units": 573,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 573
+        },
+        "fold6": {
+          "F_buses": 858.0,
+          "F_departure_units": 572,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 572
+        },
+        "fold7": {
+          "F_buses": 856.5,
+          "F_departure_units": 571,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 571
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4631089.832965583,
+        "naive": 4380442.147426777,
+        "point": 3764055.4444642365,
+        "robust": 2435315.990038134,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.054122829523758194,
+        "point": 0.18722037787509913,
+        "robust": 0.47413760521275705
+      },
+      "point_crowded_route_hour_share": 0.3398859543817527,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 1.7232795127463532e-05,
+        "median_paired_difference": -794.8775566901386
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "L_0.99": {
+      "parameter": "L",
+      "value": 0.99,
+      "x_max_by_route": {
+        "SER_1d28": 78,
+        "SER_8b94": 79,
+        "SER_49d1": 64,
+        "SER_108c": 69,
+        "SER_8722": 86,
+        "SER_031b": 66,
+        "SER_be47": 68,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 585.0,
+          "F_departure_units": 390,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 390
+        },
+        "fold2": {
+          "F_buses": 588.0,
+          "F_departure_units": 392,
+          "fixed_busiest_timestamp": "2018-02-23 18:00:00",
+          "fixed_busiest_departures": 392
+        },
+        "fold3": {
+          "F_buses": 586.5,
+          "F_departure_units": 391,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 391
+        },
+        "fold4": {
+          "F_buses": 589.5,
+          "F_departure_units": 393,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 393
+        },
+        "fold5": {
+          "F_buses": 589.5,
+          "F_departure_units": 393,
+          "fixed_busiest_timestamp": "2018-03-16 18:00:00",
+          "fixed_busiest_departures": 393
+        },
+        "fold6": {
+          "F_buses": 589.5,
+          "F_departure_units": 393,
+          "fixed_busiest_timestamp": "2018-03-23 18:00:00",
+          "fixed_busiest_departures": 393
+        },
+        "fold7": {
+          "F_buses": 586.5,
+          "F_departure_units": 391,
+          "fixed_busiest_timestamp": "2018-03-30 18:00:00",
+          "fixed_busiest_departures": 391
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4240488.999523986,
+        "naive": 3935254.1824499443,
+        "point": 3331214.4648854844,
+        "robust": 1362181.4159745127,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.07198104207045597,
+        "point": 0.2144268113277907,
+        "robust": 0.678767845848103
+      },
+      "point_crowded_route_hour_share": 0.3085234093637455,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 9.970972082174624e-05,
+        "median_paired_difference": -533.5963903415104
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_wait_0.75": {
+      "parameter": "w_wait",
+      "value": 0.75,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 639.0,
+          "F_departure_units": 426,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 426
+        },
+        "fold2": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 429
+        },
+        "fold3": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold4": {
+          "F_buses": 648.0,
+          "F_departure_units": 432,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 432
+        },
+        "fold5": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold6": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold7": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 429
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4338525.674442276,
+        "naive": 4080957.395703431,
+        "point": 3488506.0362023003,
+        "robust": 1794133.813928295,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.05936769724705061,
+        "point": 0.19592361599871072,
+        "robust": 0.5864646314075499
+      },
+      "point_crowded_route_hour_share": 0.3212785114045618,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.0002596415259935445,
+        "median_paired_difference": -304.8709597990528
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_wait_1.25": {
+      "parameter": "w_wait",
+      "value": 1.25,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 642.0,
+          "F_departure_units": 428,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 428
+        },
+        "fold2": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold3": {
+          "F_buses": 646.5,
+          "F_departure_units": 431,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 431
+        },
+        "fold4": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold5": {
+          "F_buses": 651.0,
+          "F_departure_units": 434,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 434
+        },
+        "fold6": {
+          "F_buses": 646.5,
+          "F_departure_units": 431,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 431
+        },
+        "fold7": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 430
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4279998.176287252,
+        "naive": 3992046.6353268586,
+        "point": 3395059.709866654,
+        "robust": 1426459.3594203629,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.06727842608806475,
+        "point": 0.20676141203131335,
+        "robust": 0.6667149609260428
+      },
+      "point_crowded_route_hour_share": 0.31437575030012005,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.0002725908674850165,
+        "median_paired_difference": -117.32236522304447
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_over_11.25": {
+      "parameter": "w_over",
+      "value": 11.25,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 640.5,
+          "F_departure_units": 427,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 427
+        },
+        "fold2": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 429
+        },
+        "fold3": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold4": {
+          "F_buses": 648.0,
+          "F_departure_units": 432,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 432
+        },
+        "fold5": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold6": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold7": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 429
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 3271601.822944928,
+        "naive": 3089102.0470297188,
+        "point": 2628883.93781567,
+        "robust": 1474954.4033762366,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.05578300349243976,
+        "point": 0.19645357837302962,
+        "robust": 0.5491644511774485
+      },
+      "point_crowded_route_hour_share": 0.320078031212485,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.00015970528577243437,
+        "median_paired_difference": -173.434934405268
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_over_18.75": {
+      "parameter": "w_over",
+      "value": 18.75,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 642.0,
+          "F_departure_units": 428,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 428
+        },
+        "fold2": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 429
+        },
+        "fold3": {
+          "F_buses": 646.5,
+          "F_departure_units": 431,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 431
+        },
+        "fold4": {
+          "F_buses": 648.0,
+          "F_departure_units": 432,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 432
+        },
+        "fold5": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold6": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold7": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 429
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 5368643.282121174,
+        "naive": 5015196.433353312,
+        "point": 4278668.267320931,
+        "robust": 1742391.2271418273,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.0658354131936688,
+        "point": 0.20302615717272787,
+        "robust": 0.6754503632334088
+      },
+      "point_crowded_route_hour_share": 0.3172268907563025,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.0006740334694886913,
+        "median_paired_difference": -45.12756115056254
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_op_75": {
+      "parameter": "w_op",
+      "value": 75.0,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 642.0,
+          "F_departure_units": 428,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 428
+        },
+        "fold2": {
+          "F_buses": 646.5,
+          "F_departure_units": 431,
+          "fixed_busiest_timestamp": "2018-02-23 18:00:00",
+          "fixed_busiest_departures": 431
+        },
+        "fold3": {
+          "F_buses": 648.0,
+          "F_departure_units": 432,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 432
+        },
+        "fold4": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold5": {
+          "F_buses": 651.0,
+          "F_departure_units": 434,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 434
+        },
+        "fold6": {
+          "F_buses": 646.5,
+          "F_departure_units": 431,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 431
+        },
+        "fold7": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 430
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4224178.764947884,
+        "naive": 3910160.206934914,
+        "point": 3345363.8049831092,
+        "robust": 1153006.0790014304,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.07433836858863241,
+        "point": 0.20804397940190322,
+        "robust": 0.727046097440515
+      },
+      "point_crowded_route_hour_share": 0.31077430972388953,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 0.0005080705008233316,
+        "median_paired_difference": -64.03263983259967
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    },
+    "w_op_125": {
+      "parameter": "w_op",
+      "value": 125.0,
+      "x_max_by_route": {
+        "SER_1d28": 86,
+        "SER_8b94": 87,
+        "SER_49d1": 70,
+        "SER_108c": 75,
+        "SER_8722": 94,
+        "SER_031b": 72,
+        "SER_be47": 75,
+        "SER_f64c": 15
+      },
+      "fleet_cap_by_fold": {
+        "fold1": {
+          "F_buses": 639.0,
+          "F_departure_units": 426,
+          "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+          "fixed_busiest_departures": 426
+        },
+        "fold2": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+          "fixed_busiest_departures": 429
+        },
+        "fold3": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold4": {
+          "F_buses": 648.0,
+          "F_departure_units": 432,
+          "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+          "fixed_busiest_departures": 432
+        },
+        "fold5": {
+          "F_buses": 649.5,
+          "F_departure_units": 433,
+          "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+          "fixed_busiest_departures": 433
+        },
+        "fold6": {
+          "F_buses": 645.0,
+          "F_departure_units": 430,
+          "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+          "fixed_busiest_departures": 430
+        },
+        "fold7": {
+          "F_buses": 643.5,
+          "F_departure_units": 429,
+          "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+          "fixed_busiest_departures": 429
+        }
+      },
+      "regret_by_plan": {
+        "fixed": 4372595.333211295,
+        "naive": 4133701.948292166,
+        "point": 3527246.627137199,
+        "robust": 2063539.8858591095,
+        "oracle": 0.0
+      },
+      "gap_closed_naive_point_robust": {
+        "naive": 0.05463423132359305,
+        "point": 0.1933288222793899,
+        "robust": 0.5280743520476621
+      },
+      "point_crowded_route_hour_share": 0.32232893157262904,
+      "wilcoxon_point_vs_fixed": {
+        "p_value": 9.611046463632478e-05,
+        "median_paired_difference": -440.2163732737172
+      },
+      "regret_ranking_best_to_worst": [
+        "oracle",
+        "robust",
+        "point",
+        "naive",
+        "fixed"
+      ],
+      "ranking_identical_to_main": true
+    }
+  }
+}

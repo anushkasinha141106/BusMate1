@@ -1,0 +1,643 @@
+{
+  "backend": "lightgbm",
+  "fixed_target": "raw",
+  "fixed_objective": "poisson",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scoring_hours_inclusive": [
+    5,
+    21
+  ],
+  "peak_hours": [
+    7,
+    8,
+    9,
+    17,
+    18,
+    19
+  ],
+  "mapping_file": "data/mapping_janmar_v2.json",
+  "mapped_routes": {
+    "P01": "SER_1d28",
+    "P02": "SER_8b94",
+    "P03": "SER_49d1",
+    "P04": "SER_108c",
+    "P05": "SER_8722",
+    "P06": "SER_031b",
+    "P07": "SER_be47",
+    "P08": "SER_f64c"
+  },
+  "pool_size": 41,
+  "folds": {
+    "fold1": {
+      "train_rows": 31570,
+      "calibration_rows": 6519,
+      "test_rows": 6683,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-02-03",
+      "calibration_start": "2018-02-04",
+      "calibration_end": "2018-02-10",
+      "test_start": "2018-02-11",
+      "test_end": "2018-02-17",
+      "calibration_rows_actual": 6519,
+      "qhat": 8.284536698978798
+    },
+    "fold2": {
+      "train_rows": 38089,
+      "calibration_rows": 6683,
+      "test_rows": 6724,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-02-10",
+      "calibration_start": "2018-02-11",
+      "calibration_end": "2018-02-17",
+      "test_start": "2018-02-18",
+      "test_end": "2018-02-24",
+      "calibration_rows_actual": 6683,
+      "qhat": 0.001022529100705444
+    },
+    "fold3": {
+      "train_rows": 44772,
+      "calibration_rows": 6724,
+      "test_rows": 6560,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-02-17",
+      "calibration_start": "2018-02-18",
+      "calibration_end": "2018-02-24",
+      "test_start": "2018-02-25",
+      "test_end": "2018-03-03",
+      "calibration_rows_actual": 6724,
+      "qhat": 0.0
+    },
+    "fold4": {
+      "train_rows": 51496,
+      "calibration_rows": 6560,
+      "test_rows": 6478,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-02-24",
+      "calibration_start": "2018-02-25",
+      "calibration_end": "2018-03-03",
+      "test_start": "2018-03-04",
+      "test_end": "2018-03-10",
+      "calibration_rows_actual": 6560,
+      "qhat": 5.157105798474359e-06
+    },
+    "fold5": {
+      "train_rows": 58056,
+      "calibration_rows": 6478,
+      "test_rows": 6683,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-03-03",
+      "calibration_start": "2018-03-04",
+      "calibration_end": "2018-03-10",
+      "test_start": "2018-03-11",
+      "test_end": "2018-03-17",
+      "calibration_rows_actual": 6478,
+      "qhat": 0.0
+    },
+    "fold6": {
+      "train_rows": 64534,
+      "calibration_rows": 6683,
+      "test_rows": 6806,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-03-10",
+      "calibration_start": "2018-03-11",
+      "calibration_end": "2018-03-17",
+      "test_start": "2018-03-18",
+      "test_end": "2018-03-24",
+      "calibration_rows_actual": 6683,
+      "qhat": 0.0
+    },
+    "fold7": {
+      "train_rows": 71217,
+      "calibration_rows": 6806,
+      "test_rows": 6560,
+      "test_service_rows": 4879,
+      "train_start": "2018-01-01",
+      "train_end": "2018-03-17",
+      "calibration_start": "2018-03-18",
+      "calibration_end": "2018-03-24",
+      "test_start": "2018-03-25",
+      "test_end": "2018-03-31",
+      "calibration_rows_actual": 6806,
+      "qhat": 0.6060958439091806
+    }
+  },
+  "fold_metrics": {
+    "fold1": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 98.16491596638656,
+          "rmse": 138.15467142045586,
+          "wape": 0.05956104061811477
+        },
+        "historical_average": {
+          "mae": 117.53728991596638,
+          "rmse": 176.44372749998692,
+          "wape": 0.07131512546931892
+        },
+        "model": {
+          "mae": 98.18400229089971,
+          "rmse": 138.54353123596863,
+          "wape": 0.05957262114399194
+        },
+        "interval_80": {
+          "coverage": 0.7804621848739496,
+          "mean_width": 373.68546859143305,
+          "peak_coverage": 0.7797619047619048,
+          "peak_mean_width": 479.1011493449382,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 97.55995080959212,
+          "rmse": 134.64761917181087,
+          "wape": 0.06647264642814
+        },
+        "historical_average": {
+          "mae": 114.16165197786431,
+          "rmse": 166.62752375971905,
+          "wape": 0.077784245119062
+        },
+        "model": {
+          "mae": 97.63538363741752,
+          "rmse": 134.13315315917976,
+          "wape": 0.06652404271987142
+        },
+        "interval_80": {
+          "coverage": 0.8167657306825169,
+          "mean_width": 351.5576498955587,
+          "peak_coverage": 0.7996515679442509,
+          "peak_mean_width": 416.60905970776366,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold2": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 92.86869747899159,
+          "rmse": 130.94985489032936,
+          "wape": 0.056727900366375573
+        },
+        "historical_average": {
+          "mae": 106.20728291316526,
+          "rmse": 155.8582981614555,
+          "wape": 0.06487563976704246
+        },
+        "model": {
+          "mae": 90.38015469545262,
+          "rmse": 125.94254820275826,
+          "wape": 0.05520779928911004
+        },
+        "interval_80": {
+          "coverage": 0.8151260504201681,
+          "mean_width": 382.6275447287864,
+          "peak_coverage": 0.8244047619047619,
+          "peak_mean_width": 506.9656388485767,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 97.23939331830293,
+          "rmse": 134.77397215487778,
+          "wape": 0.06649961552165568
+        },
+        "historical_average": {
+          "mae": 103.88656926185108,
+          "rmse": 149.46361639288864,
+          "wape": 0.07104545470746586
+        },
+        "model": {
+          "mae": 92.83953159942686,
+          "rmse": 124.76305850412331,
+          "wape": 0.06349065893863844
+        },
+        "interval_80": {
+          "coverage": 0.8015986882557902,
+          "mean_width": 348.1538514450543,
+          "peak_coverage": 0.8019744483159117,
+          "peak_mean_width": 422.5704110444451,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold3": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 101.40336134453781,
+          "rmse": 134.62541402291149,
+          "wape": 0.06191594629367615
+        },
+        "historical_average": {
+          "mae": 101.48261179471788,
+          "rmse": 144.09724558335768,
+          "wape": 0.06196433587911037
+        },
+        "model": {
+          "mae": 98.63570930493127,
+          "rmse": 135.97338928531997,
+          "wape": 0.06022604378184889
+        },
+        "interval_80": {
+          "coverage": 0.7647058823529411,
+          "mean_width": 372.5960817959556,
+          "peak_coverage": 0.7648809523809523,
+          "peak_mean_width": 496.32457982095036,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 98.35109653617545,
+          "rmse": 133.52239576234703,
+          "wape": 0.06713999743391742
+        },
+        "historical_average": {
+          "mae": 102.31561649049864,
+          "rmse": 144.97927614337277,
+          "wape": 0.0698464020286244
+        },
+        "model": {
+          "mae": 94.82221609289233,
+          "rmse": 129.68043876401924,
+          "wape": 0.06473098490379803
+        },
+        "interval_80": {
+          "coverage": 0.7852018856323018,
+          "mean_width": 343.56008646452057,
+          "peak_coverage": 0.759581881533101,
+          "peak_mean_width": 415.1597070007691,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold4": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 106.94117647058823,
+          "rmse": 140.61190555281325,
+          "wape": 0.0659494418705886
+        },
+        "historical_average": {
+          "mae": 91.3295547385621,
+          "rmse": 130.8130750778014,
+          "wape": 0.056321927250857086
+        },
+        "model": {
+          "mae": 94.90007652307155,
+          "rmse": 129.88573507237817,
+          "wape": 0.05852382858247315
+        },
+        "interval_80": {
+          "coverage": 0.7878151260504201,
+          "mean_width": 344.55077856665577,
+          "peak_coverage": 0.8125,
+          "peak_mean_width": 423.9802729739738,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 98.00430416068866,
+          "rmse": 132.64157514311262,
+          "wape": 0.06734193138421897
+        },
+        "historical_average": {
+          "mae": 91.96405513424882,
+          "rmse": 128.82131997192653,
+          "wape": 0.06319148065692053
+        },
+        "model": {
+          "mae": 89.81302920199737,
+          "rmse": 122.22537323184419,
+          "wape": 0.06171344107512983
+        },
+        "interval_80": {
+          "coverage": 0.8175855708136913,
+          "mean_width": 327.39318703613225,
+          "peak_coverage": 0.8130081300813008,
+          "peak_mean_width": 385.7176753334931,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold5": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 139.6481092436975,
+          "rmse": 207.53703982460496,
+          "wape": 0.0885662913144478
+        },
+        "historical_average": {
+          "mae": 122.75916199813258,
+          "rmse": 190.6515720404393,
+          "wape": 0.0778551443476474
+        },
+        "model": {
+          "mae": 103.22264791057482,
+          "rmse": 148.38697625585098,
+          "wape": 0.06546488280154956
+        },
+        "interval_80": {
+          "coverage": 0.8014705882352942,
+          "mean_width": 327.0718108023612,
+          "peak_coverage": 0.8125,
+          "peak_mean_width": 397.467566180879,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 148.64644394343102,
+          "rmse": 220.93357786688588,
+          "wape": 0.10697241254394706
+        },
+        "historical_average": {
+          "mae": 134.20797294527566,
+          "rmse": 205.52698774216032,
+          "wape": 0.09658186410468353
+        },
+        "model": {
+          "mae": 100.22832831841143,
+          "rmse": 141.85615993635614,
+          "wape": 0.0721286416346934
+        },
+        "interval_80": {
+          "coverage": 0.7936052469768395,
+          "mean_width": 322.2193238452703,
+          "peak_coverage": 0.8089430894308943,
+          "peak_mean_width": 392.5592099537881,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold6": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 143.12394957983193,
+          "rmse": 216.6703533407529,
+          "wape": 0.09158596695473668
+        },
+        "historical_average": {
+          "mae": 104.27282276546983,
+          "rmse": 162.37523910859898,
+          "wape": 0.06672487258848778
+        },
+        "model": {
+          "mae": 99.83642714325013,
+          "rmse": 146.03663984461693,
+          "wape": 0.06388599353262357
+        },
+        "interval_80": {
+          "coverage": 0.773109243697479,
+          "mean_width": 330.1268724306832,
+          "peak_coverage": 0.7708333333333334,
+          "peak_mean_width": 403.13738074661717,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 150.1736011477762,
+          "rmse": 223.22780012378414,
+          "wape": 0.10603302449478537
+        },
+        "historical_average": {
+          "mae": 92.90954927425516,
+          "rmse": 131.146200550011,
+          "wape": 0.06560061448018654
+        },
+        "model": {
+          "mae": 103.91524078164743,
+          "rmse": 151.4037659961064,
+          "wape": 0.07337139941353205
+        },
+        "interval_80": {
+          "coverage": 0.7659356425497028,
+          "mean_width": 320.42151602681014,
+          "peak_coverage": 0.778164924506388,
+          "peak_mean_width": 387.2668670090604,
+          "peak_n": 1722
+        }
+      }
+    },
+    "fold7": {
+      "mapped8": {
+        "n_service_rows": 952,
+        "seasonal_naive": {
+          "mae": 89.93802521008404,
+          "rmse": 125.70126400760353,
+          "wape": 0.05704051014752281
+        },
+        "historical_average": {
+          "mae": 102.62665520753757,
+          "rmse": 158.41605001742437,
+          "wape": 0.06508789529343059
+        },
+        "model": {
+          "mae": 86.04566956382043,
+          "rmse": 119.99818340611594,
+          "wape": 0.05457189966580664
+        },
+        "interval_80": {
+          "coverage": 0.8350840336134454,
+          "mean_width": 313.4518189736236,
+          "peak_coverage": 0.8065476190476191,
+          "peak_mean_width": 379.9027262702659,
+          "peak_n": 336
+        }
+      },
+      "pool": {
+        "n_service_rows": 4879,
+        "seasonal_naive": {
+          "mae": 90.32322197171551,
+          "rmse": 123.87294481137127,
+          "wape": 0.06354371870484074
+        },
+        "historical_average": {
+          "mae": 92.70176762501009,
+          "rmse": 131.01682806425492,
+          "wape": 0.0652170606496941
+        },
+        "model": {
+          "mae": 86.14218446139455,
+          "rmse": 116.89863458448445,
+          "wape": 0.06060229715620046
+        },
+        "interval_80": {
+          "coverage": 0.8179954908792786,
+          "mean_width": 303.1569037838204,
+          "peak_coverage": 0.8101045296167247,
+          "peak_mean_width": 357.69070533783815,
+          "peak_n": 1722
+        }
+      }
+    }
+  },
+  "pooled_metrics": {
+    "mapped8": {
+      "n_service_rows": 6664,
+      "seasonal_naive": {
+        "mae": 110.2983193277311,
+        "rmse": 160.3339196374695,
+        "wape": 0.0685643498551575
+      },
+      "historical_average": {
+        "mae": 106.60219704765022,
+        "rmse": 160.85026754100244,
+        "wape": 0.06626674257824233
+      },
+      "model": {
+        "mae": 95.88638391885723,
+        "rmse": 135.30909650784952,
+        "wape": 0.059605509979022406
+      },
+      "interval_80": {
+        "coverage": 0.793967587034814,
+        "mean_width": 349.1586251270712,
+        "peak_coverage": 0.7959183673469388,
+        "peak_mean_width": 440.9827591694573,
+        "peak_n": 2352
+      }
+    },
+    "pool": {
+      "n_service_rows": 34153,
+      "seasonal_naive": {
+        "mae": 111.47114455538313,
+        "rmse": 162.87717790628622,
+        "wape": 0.07743035313757983
+      },
+      "historical_average": {
+        "mae": 104.59245467271482,
+        "rmse": 153.2151172767932,
+        "wape": 0.07265226111328668
+      },
+      "model": {
+        "mae": 95.05655915616964,
+        "rmse": 132.03091782978552,
+        "wape": 0.06602841455394408
+      },
+      "interval_80": {
+        "coverage": 0.7998126079700173,
+        "mean_width": 330.9232169281667,
+        "peak_coverage": 0.7959183673469388,
+        "peak_mean_width": 396.7962336267368,
+        "peak_n": 12054
+      }
+    }
+  },
+  "per_mapped_route_wape": {
+    "SER_031b": {
+      "model_wape": 0.054784103282764424,
+      "seasonal_naive_wape": 0.061061851087836065,
+      "service_rows": 833
+    },
+    "SER_108c": {
+      "model_wape": 0.062539066511787,
+      "seasonal_naive_wape": 0.0721588674793551,
+      "service_rows": 833
+    },
+    "SER_1d28": {
+      "model_wape": 0.056028116378153595,
+      "seasonal_naive_wape": 0.06288934597795563,
+      "service_rows": 833
+    },
+    "SER_49d1": {
+      "model_wape": 0.060112013760792136,
+      "seasonal_naive_wape": 0.07388757605861578,
+      "service_rows": 833
+    },
+    "SER_8722": {
+      "model_wape": 0.0650178780022892,
+      "seasonal_naive_wape": 0.06911010473871146,
+      "service_rows": 833
+    },
+    "SER_8b94": {
+      "model_wape": 0.05859452168469034,
+      "seasonal_naive_wape": 0.06765467170268522,
+      "service_rows": 833
+    },
+    "SER_be47": {
+      "model_wape": 0.052941559956287236,
+      "seasonal_naive_wape": 0.06229490789764595,
+      "service_rows": 833
+    },
+    "SER_f64c": {
+      "model_wape": 0.3093149451655057,
+      "seasonal_naive_wape": 0.43866318907210117,
+      "service_rows": 833
+    }
+  },
+  "fold_wape_differences": {
+    "mapped8": {
+      "model_minus_seasonal_naive_wape": [
+        1.1580525877172287e-05,
+        -0.0015201010772655302,
+        -0.0016899025118272612,
+        -0.007425613288115446,
+        -0.02310140851289824,
+        -0.02769997342211311,
+        -0.00246861048171617
+      ],
+      "folds_model_beats_naive": 6,
+      "mean_difference": -0.00912771839543694,
+      "min_difference": -0.02769997342211311,
+      "max_difference": 1.1580525877172287e-05
+    },
+    "pool": {
+      "model_minus_seasonal_naive_wape": [
+        5.1396291731412025e-05,
+        -0.003008956583017239,
+        -0.002409012530119395,
+        -0.005628490309089143,
+        -0.034843770909253655,
+        -0.03266162508125332,
+        -0.0029414215486402787
+      ],
+      "folds_model_beats_naive": 6,
+      "mean_difference": -0.011634554381377374,
+      "min_difference": -0.034843770909253655,
+      "max_difference": 5.1396291731412025e-05
+    }
+  },
+  "pooled_row_counts": {
+    "train_rows_sum_across_folds": 359734,
+    "calibration_rows_sum_across_folds": 46453,
+    "test_rows_sum_across_folds": 46494,
+    "pooled_test_date_span": [
+      "2018-02-11",
+      "2018-03-31"
+    ],
+    "note": "training/calibration counts are sums across folds; blocks overlap across origins"
+  },
+  "sanity_checks": {
+    "no_train_or_calibration_row_in_its_test_week": true,
+    "no_lag_or_rolling_feature_uses_future_timestamp": true,
+    "SER_9b2d_absent_from_forecasts": true,
+    "same_8_mapped_routes_all_folds": true,
+    "last_fold_test_dates_2018_03_25_to_2018_03_31": true
+  }
+}

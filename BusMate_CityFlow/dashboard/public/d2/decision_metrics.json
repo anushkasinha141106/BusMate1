@@ -1,0 +1,1095 @@
+{
+  "per_fold": {
+    "fold1": {
+      "fixed": {
+        "total_cost": 5311120.596503155,
+        "regret_vs_oracle": 937483.5541051542,
+        "share_fixed_to_oracle_regret_gap_closed": 9.934281732594685e-16,
+        "overload_passengers": 66487.99999999997,
+        "crowded_route_hours": 420,
+        "crowded_route_hour_share": 0.4411764705882353,
+        "average_wait_minutes_per_passenger": 0.9119656784566483,
+        "bus_hours": 43243.5,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4906510.214601599,
+        "regret_vs_oracle": 532873.1722035976,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4315919784723748,
+        "overload_passengers": 37433.999999999985,
+        "crowded_route_hours": 317,
+        "crowded_route_hour_share": 0.3329831932773109,
+        "average_wait_minutes_per_passenger": 0.8584291396791258,
+        "bus_hours": 44971.5,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4845209.554492216,
+        "regret_vs_oracle": 471572.51209421456,
+        "share_fixed_to_oracle_regret_gap_closed": 0.49698049631991786,
+        "overload_passengers": 32582.999999999985,
+        "crowded_route_hours": 282,
+        "crowded_route_hour_share": 0.296218487394958,
+        "average_wait_minutes_per_passenger": 0.8475716857318866,
+        "bus_hours": 45399.0,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4621118.871934721,
+        "regret_vs_oracle": 247481.82953672018,
+        "share_fixed_to_oracle_regret_gap_closed": 0.7360147509222751,
+        "overload_passengers": 7918.999999999996,
+        "crowded_route_hours": 61,
+        "crowded_route_hour_share": 0.06407563025210083,
+        "average_wait_minutes_per_passenger": 0.775788001327395,
+        "bus_hours": 49276.5,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4373637.042398002,
+        "regret_vs_oracle": 9.313225746154785e-10,
+        "share_fixed_to_oracle_regret_gap_closed": 0.999999999999999,
+        "overload_passengers": 2151.999999999996,
+        "crowded_route_hours": 76,
+        "crowded_route_hour_share": 0.07983193277310924,
+        "average_wait_minutes_per_passenger": 0.8597400318273286,
+        "bus_hours": 44886.0,
+        "route_hours": 952
+      }
+    },
+    "fold2": {
+      "fixed": {
+        "total_cost": 5083162.199036697,
+        "regret_vs_oracle": 744721.9134584339,
+        "share_fixed_to_oracle_regret_gap_closed": 1.2505642143528228e-15,
+        "overload_passengers": 50715.99999999998,
+        "crowded_route_hours": 379,
+        "crowded_route_hour_share": 0.39810924369747897,
+        "average_wait_minutes_per_passenger": 0.910178439045433,
+        "bus_hours": 43558.5,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4787255.197388809,
+        "regret_vs_oracle": 448814.9118105462,
+        "share_fixed_to_oracle_regret_gap_closed": 0.3973389211467109,
+        "overload_passengers": 28966.99999999999,
+        "crowded_route_hours": 301,
+        "crowded_route_hour_share": 0.3161764705882353,
+        "average_wait_minutes_per_passenger": 0.8725963884664254,
+        "bus_hours": 44892.0,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4765517.394270131,
+        "regret_vs_oracle": 427077.1086918684,
+        "share_fixed_to_oracle_regret_gap_closed": 0.42652807581751817,
+        "overload_passengers": 27855.999999999985,
+        "crowded_route_hours": 285,
+        "crowded_route_hour_share": 0.29936974789915966,
+        "average_wait_minutes_per_passenger": 0.8634384086532214,
+        "bus_hours": 45030.0,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4558195.238220221,
+        "regret_vs_oracle": 219754.95264195837,
+        "share_fixed_to_oracle_regret_gap_closed": 0.7049167633305804,
+        "overload_passengers": 3851.9999999999964,
+        "crowded_route_hours": 47,
+        "crowded_route_hour_share": 0.04936974789915966,
+        "average_wait_minutes_per_passenger": 0.7892251177215555,
+        "bus_hours": 49056.0,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4338440.285578263,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0,
+        "overload_passengers": 429.9999999999952,
+        "crowded_route_hours": 51,
+        "crowded_route_hour_share": 0.05357142857142857,
+        "average_wait_minutes_per_passenger": 0.8678098219313722,
+        "bus_hours": 44692.5,
+        "route_hours": 952
+      }
+    },
+    "fold3": {
+      "fixed": {
+        "total_cost": 5036257.490062604,
+        "regret_vs_oracle": 697659.5141786933,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0,
+        "overload_passengers": 48542.99999999997,
+        "crowded_route_hours": 391,
+        "crowded_route_hour_share": 0.4107142857142857,
+        "average_wait_minutes_per_passenger": 0.8940230677964759,
+        "bus_hours": 43713.0,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4890987.04344531,
+        "regret_vs_oracle": 552389.0675613992,
+        "share_fixed_to_oracle_regret_gap_closed": 0.2082254218066689,
+        "overload_passengers": 37335.99999999998,
+        "crowded_route_hours": 350,
+        "crowded_route_hour_share": 0.36764705882352944,
+        "average_wait_minutes_per_passenger": 0.8666584421505812,
+        "bus_hours": 44695.5,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4871540.616836923,
+        "regret_vs_oracle": 532942.6409530127,
+        "share_fixed_to_oracle_regret_gap_closed": 0.23609922874712092,
+        "overload_passengers": 36231.999999999985,
+        "crowded_route_hours": 307,
+        "crowded_route_hour_share": 0.3224789915966387,
+        "average_wait_minutes_per_passenger": 0.8589064890888497,
+        "bus_hours": 44833.5,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4576613.920411873,
+        "regret_vs_oracle": 238015.94452796225,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6588365245643326,
+        "overload_passengers": 6744.999999999995,
+        "crowded_route_hours": 76,
+        "crowded_route_hour_share": 0.07983193277310924,
+        "average_wait_minutes_per_passenger": 0.7859680366122691,
+        "bus_hours": 48750.0,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4338597.97588391,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0,
+        "overload_passengers": 1155.9999999999957,
+        "crowded_route_hours": 68,
+        "crowded_route_hour_share": 0.07142857142857142,
+        "average_wait_minutes_per_passenger": 0.8643564976492968,
+        "bus_hours": 44604.0,
+        "route_hours": 952
+      }
+    },
+    "fold4": {
+      "fixed": {
+        "total_cost": 4858293.594119545,
+        "regret_vs_oracle": 583894.8297084095,
+        "share_fixed_to_oracle_regret_gap_closed": -1.5950176765233082e-15,
+        "overload_passengers": 39886.99999999998,
+        "crowded_route_hours": 347,
+        "crowded_route_hour_share": 0.3644957983193277,
+        "average_wait_minutes_per_passenger": 0.8672438370746302,
+        "bus_hours": 43818.0,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4817563.867146309,
+        "regret_vs_oracle": 543165.1027351739,
+        "share_fixed_to_oracle_regret_gap_closed": 0.06975524512449392,
+        "overload_passengers": 34651.999999999985,
+        "crowded_route_hours": 313,
+        "crowded_route_hour_share": 0.328781512605042,
+        "average_wait_minutes_per_passenger": 0.8572649243560454,
+        "bus_hours": 44616.0,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4743723.205167832,
+        "regret_vs_oracle": 469324.4407566963,
+        "share_fixed_to_oracle_regret_gap_closed": 0.19621750891154086,
+        "overload_passengers": 30342.999999999978,
+        "crowded_route_hours": 314,
+        "crowded_route_hour_share": 0.32983193277310924,
+        "average_wait_minutes_per_passenger": 0.8541519005730497,
+        "bus_hours": 44550.0,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4498721.1426627785,
+        "regret_vs_oracle": 224322.37825164292,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6158171526134811,
+        "overload_passengers": 4519.999999999998,
+        "crowded_route_hours": 63,
+        "crowded_route_hour_share": 0.0661764705882353,
+        "average_wait_minutes_per_passenger": 0.7833123080379307,
+        "bus_hours": 48325.5,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4274398.764411136,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0,
+        "overload_passengers": 220.99999999999477,
+        "crowded_route_hours": 59,
+        "crowded_route_hour_share": 0.06197478991596639,
+        "average_wait_minutes_per_passenger": 0.8608924398670849,
+        "bus_hours": 44131.5,
+        "route_hours": 952
+      }
+    },
+    "fold5": {
+      "fixed": {
+        "total_cost": 4735687.851702033,
+        "regret_vs_oracle": 538592.9711210709,
+        "share_fixed_to_oracle_regret_gap_closed": 1.729176993671022e-15,
+        "overload_passengers": 33475.999999999985,
+        "crowded_route_hours": 308,
+        "crowded_route_hour_share": 0.3235294117647059,
+        "average_wait_minutes_per_passenger": 0.8718047828941938,
+        "bus_hours": 43873.5,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4801184.265462028,
+        "regret_vs_oracle": 604089.3848810662,
+        "share_fixed_to_oracle_regret_gap_closed": -0.12160651414307298,
+        "overload_passengers": 36624.999999999985,
+        "crowded_route_hours": 284,
+        "crowded_route_hour_share": 0.29831932773109243,
+        "average_wait_minutes_per_passenger": 0.8724452646809584,
+        "bus_hours": 44133.0,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4732499.463587437,
+        "regret_vs_oracle": 535404.5830064751,
+        "share_fixed_to_oracle_regret_gap_closed": 0.005919847241897983,
+        "overload_passengers": 35194.999999999985,
+        "crowded_route_hours": 308,
+        "crowded_route_hour_share": 0.3235294117647059,
+        "average_wait_minutes_per_passenger": 0.8768189173171014,
+        "bus_hours": 43326.0,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4439406.650324906,
+        "regret_vs_oracle": 242311.76974394452,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5501022428132012,
+        "overload_passengers": 5854.9999999999945,
+        "crowded_route_hours": 62,
+        "crowded_route_hour_share": 0.06512605042016807,
+        "average_wait_minutes_per_passenger": 0.8018776162513142,
+        "bus_hours": 47218.5,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4197094.880580963,
+        "regret_vs_oracle": 9.313225746154785e-10,
+        "share_fixed_to_oracle_regret_gap_closed": 0.9999999999999982,
+        "overload_passengers": 73.99999999999591,
+        "crowded_route_hours": 45,
+        "crowded_route_hour_share": 0.04726890756302521,
+        "average_wait_minutes_per_passenger": 0.8856195314043845,
+        "bus_hours": 42999.0,
+        "route_hours": 952
+      }
+    },
+    "fold6": {
+      "fixed": {
+        "total_cost": 4544061.99472837,
+        "regret_vs_oracle": 370437.55255790055,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0,
+        "overload_passengers": 22172.999999999985,
+        "crowded_route_hours": 225,
+        "crowded_route_hour_share": 0.23634453781512604,
+        "average_wait_minutes_per_passenger": 0.8690947234778991,
+        "bus_hours": 43777.5,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4977519.8174772505,
+        "regret_vs_oracle": 803895.3753067814,
+        "share_fixed_to_oracle_regret_gap_closed": -1.1701238704224783,
+        "overload_passengers": 52309.999999999985,
+        "crowded_route_hours": 273,
+        "crowded_route_hour_share": 0.2867647058823529,
+        "average_wait_minutes_per_passenger": 0.8914799101423524,
+        "bus_hours": 42999.0,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4700021.238915363,
+        "regret_vs_oracle": 526396.7967448942,
+        "share_fixed_to_oracle_regret_gap_closed": -0.42101359084704776,
+        "overload_passengers": 34564.999999999985,
+        "crowded_route_hours": 296,
+        "crowded_route_hour_share": 0.31092436974789917,
+        "average_wait_minutes_per_passenger": 0.8889098120915223,
+        "bus_hours": 42886.5,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4413985.774717308,
+        "regret_vs_oracle": 240361.33254683856,
+        "share_fixed_to_oracle_regret_gap_closed": 0.3511420996950105,
+        "overload_passengers": 6013.999999999997,
+        "crowded_route_hours": 61,
+        "crowded_route_hour_share": 0.06407563025210083,
+        "average_wait_minutes_per_passenger": 0.8128399250108103,
+        "bus_hours": 46717.5,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4173624.442170469,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0,
+        "overload_passengers": 76.99999999999841,
+        "crowded_route_hours": 34,
+        "crowded_route_hour_share": 0.03571428571428571,
+        "average_wait_minutes_per_passenger": 0.8930256508263795,
+        "bus_hours": 42658.5,
+        "route_hours": 952
+      }
+    },
+    "fold7": {
+      "fixed": {
+        "total_cost": 4646274.557015726,
+        "regret_vs_oracle": 446172.37536212616,
+        "share_fixed_to_oracle_regret_gap_closed": 2.0873604598661867e-15,
+        "overload_passengers": 28203.999999999978,
+        "crowded_route_hours": 284,
+        "crowded_route_hour_share": 0.29831932773109243,
+        "average_wait_minutes_per_passenger": 0.873727933545269,
+        "bus_hours": 43675.5,
+        "route_hours": 952
+      },
+      "naive": {
+        "total_cost": 4763649.555855272,
+        "regret_vs_oracle": 563547.3742016722,
+        "share_fixed_to_oracle_regret_gap_closed": -0.26307096835450633,
+        "overload_passengers": 38078.99999999997,
+        "crowded_route_hours": 374,
+        "crowded_route_hour_share": 0.39285714285714285,
+        "average_wait_minutes_per_passenger": 0.89841055620528,
+        "bus_hours": 42658.5,
+        "route_hours": 952
+      },
+      "point": {
+        "total_cost": 4687887.585338643,
+        "regret_vs_oracle": 487785.40368504263,
+        "share_fixed_to_oracle_regret_gap_closed": -0.09326670726564178,
+        "overload_passengers": 32612.999999999985,
+        "crowded_route_hours": 327,
+        "crowded_route_hour_share": 0.3434873949579832,
+        "average_wait_minutes_per_passenger": 0.890035138821365,
+        "bus_hours": 42940.5,
+        "route_hours": 952
+      },
+      "robust": {
+        "total_cost": 4398023.457872087,
+        "regret_vs_oracle": 197921.27621848695,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5564017694778884,
+        "overload_passengers": 4391.999999999998,
+        "crowded_route_hours": 56,
+        "crowded_route_hour_share": 0.058823529411764705,
+        "average_wait_minutes_per_passenger": 0.8153216521382854,
+        "bus_hours": 46624.5,
+        "route_hours": 952
+      },
+      "oracle": {
+        "total_cost": 4200102.1816536,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0,
+        "overload_passengers": 182.99999999999636,
+        "crowded_route_hours": 56,
+        "crowded_route_hour_share": 0.058823529411764705,
+        "average_wait_minutes_per_passenger": 0.8872135227823617,
+        "bus_hours": 42984.0,
+        "route_hours": 952
+      }
+    }
+  },
+  "pooled": {
+    "fixed": {
+      "total_cost": 34214858.28316813,
+      "regret_vs_oracle": 4318962.710491788,
+      "share_fixed_to_oracle_regret_gap_closed": 0.0,
+      "overload_passengers": 289486.9999999999,
+      "crowded_route_hours": 2354,
+      "crowded_route_hour_share": 0.3532412965186074,
+      "average_wait_minutes_per_passenger": 0.8857293437399293,
+      "bus_hours": 305659.5,
+      "route_hours": 6664
+    },
+    "naive": {
+      "total_cost": 33944669.96137658,
+      "regret_vs_oracle": 4048774.3887002356,
+      "share_fixed_to_oracle_regret_gap_closed": 0.06255861416334998,
+      "overload_passengers": 265402.9999999999,
+      "crowded_route_hours": 2212,
+      "crowded_route_hour_share": 0.3319327731092437,
+      "average_wait_minutes_per_passenger": 0.8736654328392608,
+      "bus_hours": 308965.5,
+      "route_hours": 6664
+    },
+    "point": {
+      "total_cost": 33346399.058608547,
+      "regret_vs_oracle": 3450503.485932205,
+      "share_fixed_to_oracle_regret_gap_closed": 0.2010805100145664,
+      "overload_passengers": 229386.99999999988,
+      "crowded_route_hours": 2119,
+      "crowded_route_hour_share": 0.3179771908763505,
+      "average_wait_minutes_per_passenger": 0.868252236172198,
+      "bus_hours": 308965.5,
+      "route_hours": 6664
+    },
+    "robust": {
+      "total_cost": 31506065.056143895,
+      "regret_vs_oracle": 1610169.4834675528,
+      "share_fixed_to_oracle_regret_gap_closed": 0.6271860649419204,
+      "overload_passengers": 39296.99999999997,
+      "crowded_route_hours": 426,
+      "crowded_route_hour_share": 0.06392557022809124,
+      "average_wait_minutes_per_passenger": 0.794636145295279,
+      "bus_hours": 335968.5,
+      "route_hours": 6664
+    },
+    "oracle": {
+      "total_cost": 29895895.572676342,
+      "regret_vs_oracle": 0.0,
+      "share_fixed_to_oracle_regret_gap_closed": 1.0,
+      "overload_passengers": 4292.999999999972,
+      "crowded_route_hours": 389,
+      "crowded_route_hour_share": 0.0583733493397359,
+      "average_wait_minutes_per_passenger": 0.8738403922548875,
+      "bus_hours": 306955.5,
+      "route_hours": 6664
+    }
+  },
+  "peak_hours_regret_table": {
+    "fold1": {
+      "fixed": {
+        "total_cost": 2446819.6273924108,
+        "regret_vs_oracle": 571972.6963652135,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2146271.408963672,
+        "regret_vs_oracle": 271424.4779364746,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5254590303674813
+      },
+      "point": {
+        "total_cost": 2100056.11860332,
+        "regret_vs_oracle": 225209.18757612258,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6062588494043726
+      },
+      "robust": {
+        "total_cost": 1996833.3120290646,
+        "regret_vs_oracle": 121986.38100186735,
+        "share_fixed_to_oracle_regret_gap_closed": 0.7867269158526806
+      },
+      "oracle": {
+        "total_cost": 1874846.9310271973,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold2": {
+      "fixed": {
+        "total_cost": 2305439.6482264157,
+        "regret_vs_oracle": 457382.0385818463,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2044959.7035513322,
+        "regret_vs_oracle": 196902.09390676278,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5695019102252566
+      },
+      "point": {
+        "total_cost": 2054163.8479877312,
+        "regret_vs_oracle": 206106.23834316176,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5493783730943775
+      },
+      "robust": {
+        "total_cost": 1961538.6172796923,
+        "regret_vs_oracle": 113481.00763512286,
+        "share_fixed_to_oracle_regret_gap_closed": 0.7518901092247067
+      },
+      "oracle": {
+        "total_cost": 1848057.6096445695,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold3": {
+      "fixed": {
+        "total_cost": 2278094.1036660615,
+        "regret_vs_oracle": 423180.3917255192,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2079228.0926511865,
+        "regret_vs_oracle": 224314.38071064418,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4699320074921201
+      },
+      "point": {
+        "total_cost": 2066724.217337279,
+        "regret_vs_oracle": 211810.5053967368,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4994793956944015
+      },
+      "robust": {
+        "total_cost": 1971182.3376713886,
+        "regret_vs_oracle": 116268.62573084631,
+        "share_fixed_to_oracle_regret_gap_closed": 0.7252504416455576
+      },
+      "oracle": {
+        "total_cost": 1854913.7119405423,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold4": {
+      "fixed": {
+        "total_cost": 2162003.1898223045,
+        "regret_vs_oracle": 344231.9937526563,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2020818.2775814978,
+        "regret_vs_oracle": 203047.08151184954,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4101446547767824
+      },
+      "point": {
+        "total_cost": 1999454.7421316127,
+        "regret_vs_oracle": 181683.54606196447,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4722061012361594
+      },
+      "robust": {
+        "total_cost": 1925797.5360808945,
+        "regret_vs_oracle": 108026.34001124627,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6861815811087354
+      },
+      "oracle": {
+        "total_cost": 1817771.1960696483,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold5": {
+      "fixed": {
+        "total_cost": 2048676.1636409299,
+        "regret_vs_oracle": 263797.15621710545,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2008112.9626228835,
+        "regret_vs_oracle": 223233.9551990591,
+        "share_fixed_to_oracle_regret_gap_closed": 0.15376663493924392
+      },
+      "point": {
+        "total_cost": 2062124.5325507568,
+        "regret_vs_oracle": 277245.5251269324,
+        "share_fixed_to_oracle_regret_gap_closed": -0.0509799616594765
+      },
+      "robust": {
+        "total_cost": 1897234.1074367266,
+        "regret_vs_oracle": 112355.10001290217,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5740852493480493
+      },
+      "oracle": {
+        "total_cost": 1784879.0074238244,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold6": {
+      "fixed": {
+        "total_cost": 2013734.4970536951,
+        "regret_vs_oracle": 226027.04185672803,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2105554.8539834814,
+        "regret_vs_oracle": 317847.3987865143,
+        "share_fixed_to_oracle_regret_gap_closed": -0.40623615730010093
+      },
+      "point": {
+        "total_cost": 1992176.7474414173,
+        "regret_vs_oracle": 204469.2922444502,
+        "share_fixed_to_oracle_regret_gap_closed": 0.09537686037559466
+      },
+      "robust": {
+        "total_cost": 1886671.9226688468,
+        "regret_vs_oracle": 98964.46747187967,
+        "share_fixed_to_oracle_regret_gap_closed": 0.5621565160570018
+      },
+      "oracle": {
+        "total_cost": 1787707.455196967,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "fold7": {
+      "fixed": {
+        "total_cost": 2062383.1539953344,
+        "regret_vs_oracle": 267663.57543546567,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 2030543.0093716304,
+        "regret_vs_oracle": 235823.43081176165,
+        "share_fixed_to_oracle_regret_gap_closed": 0.11895583690049286
+      },
+      "point": {
+        "total_cost": 1987911.9755961627,
+        "regret_vs_oracle": 193192.397036294,
+        "share_fixed_to_oracle_regret_gap_closed": 0.2782267937578487
+      },
+      "robust": {
+        "total_cost": 1893282.6651683697,
+        "regret_vs_oracle": 98563.08660850092,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6317650377039639
+      },
+      "oracle": {
+        "total_cost": 1794719.5785598687,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    },
+    "pooled": {
+      "fixed": {
+        "total_cost": 15317150.383797152,
+        "regret_vs_oracle": 2554254.893934535,
+        "share_fixed_to_oracle_regret_gap_closed": 0.0
+      },
+      "naive": {
+        "total_cost": 14435488.308725683,
+        "regret_vs_oracle": 1672592.818863066,
+        "share_fixed_to_oracle_regret_gap_closed": 0.3451738811052527
+      },
+      "point": {
+        "total_cost": 14262612.18164828,
+        "regret_vs_oracle": 1499716.6917856634,
+        "share_fixed_to_oracle_regret_gap_closed": 0.4128555081378261
+      },
+      "robust": {
+        "total_cost": 13532540.498334983,
+        "regret_vs_oracle": 769645.0084723663,
+        "share_fixed_to_oracle_regret_gap_closed": 0.6986812043308579
+      },
+      "oracle": {
+        "total_cost": 12762895.489862617,
+        "regret_vs_oracle": 0.0,
+        "share_fixed_to_oracle_regret_gap_closed": 1.0
+      }
+    }
+  },
+  "fleet_binding": {
+    "per_fold": {
+      "fold1": {
+        "fixed": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "naive": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        },
+        "point": {
+          "binding_hours": 3,
+          "hours": 119,
+          "binding_share": 0.025210084033613446
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        }
+      },
+      "fold2": {
+        "fixed": {
+          "binding_hours": 2,
+          "hours": 119,
+          "binding_share": 0.01680672268907563
+        },
+        "naive": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        },
+        "point": {
+          "binding_hours": 3,
+          "hours": 119,
+          "binding_share": 0.025210084033613446
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 3,
+          "hours": 119,
+          "binding_share": 0.025210084033613446
+        }
+      },
+      "fold3": {
+        "fixed": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "naive": {
+          "binding_hours": 2,
+          "hours": 119,
+          "binding_share": 0.01680672268907563
+        },
+        "point": {
+          "binding_hours": 3,
+          "hours": 119,
+          "binding_share": 0.025210084033613446
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        }
+      },
+      "fold4": {
+        "fixed": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "naive": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        },
+        "point": {
+          "binding_hours": 4,
+          "hours": 119,
+          "binding_share": 0.03361344537815126
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        }
+      },
+      "fold5": {
+        "fixed": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "naive": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "point": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 0,
+          "hours": 119,
+          "binding_share": 0.0
+        }
+      },
+      "fold6": {
+        "fixed": {
+          "binding_hours": 2,
+          "hours": 119,
+          "binding_share": 0.01680672268907563
+        },
+        "naive": {
+          "binding_hours": 0,
+          "hours": 119,
+          "binding_share": 0.0
+        },
+        "point": {
+          "binding_hours": 0,
+          "hours": 119,
+          "binding_share": 0.0
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 0,
+          "hours": 119,
+          "binding_share": 0.0
+        }
+      },
+      "fold7": {
+        "fixed": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "naive": {
+          "binding_hours": 0,
+          "hours": 119,
+          "binding_share": 0.0
+        },
+        "point": {
+          "binding_hours": 1,
+          "hours": 119,
+          "binding_share": 0.008403361344537815
+        },
+        "robust": {
+          "binding_hours": 5,
+          "hours": 119,
+          "binding_share": 0.04201680672268908
+        },
+        "oracle": {
+          "binding_hours": 2,
+          "hours": 119,
+          "binding_share": 0.01680672268907563
+        }
+      }
+    },
+    "pooled": {
+      "fixed": {
+        "binding_hours": 9,
+        "hours": 833,
+        "binding_share": 0.010804321728691477
+      },
+      "naive": {
+        "binding_hours": 15,
+        "hours": 833,
+        "binding_share": 0.01800720288115246
+      },
+      "point": {
+        "binding_hours": 15,
+        "hours": 833,
+        "binding_share": 0.01800720288115246
+      },
+      "robust": {
+        "binding_hours": 35,
+        "hours": 833,
+        "binding_share": 0.04201680672268908
+      },
+      "oracle": {
+        "binding_hours": 14,
+        "hours": 833,
+        "binding_share": 0.01680672268907563
+      }
+    }
+  },
+  "crowded_route_hours": {
+    "fixed": {
+      "route_hours": 2354,
+      "total_route_hours": 6664,
+      "share": 0.3532412965186074
+    },
+    "naive": {
+      "route_hours": 2212,
+      "total_route_hours": 6664,
+      "share": 0.3319327731092437
+    },
+    "point": {
+      "route_hours": 2119,
+      "total_route_hours": 6664,
+      "share": 0.3179771908763505
+    },
+    "robust": {
+      "route_hours": 426,
+      "total_route_hours": 6664,
+      "share": 0.06392557022809124
+    },
+    "oracle": {
+      "route_hours": 389,
+      "total_route_hours": 6664,
+      "share": 0.0583733493397359
+    }
+  },
+  "wilcoxon_daily_route_level_regret": {
+    "point_vs_fixed": {
+      "n_daily_route_pairs": 392,
+      "median_paired_difference": -157.37714451682405,
+      "p_value": 0.00030023462011298925
+    },
+    "robust_vs_fixed": {
+      "n_daily_route_pairs": 392,
+      "median_paired_difference": -3651.309336848637,
+      "p_value": 5.482202968797953e-41
+    },
+    "point_vs_naive": {
+      "n_daily_route_pairs": 392,
+      "median_paired_difference": -502.0,
+      "p_value": 2.4087690876703985e-05
+    }
+  },
+  "sanity_checks": {
+    "buses_on_road_le_fleet_cap_every_hour_every_plan": true,
+    "oracle_total_cost_le_other_plans_each_fold": true,
+    "crowded_route_hours_nonzero": true,
+    "infeasible_hours": []
+  },
+  "fleet": {
+    "fold1": {
+      "F_buses": 642.0,
+      "F_departure_units": 428,
+      "fixed_busiest_timestamp": "2018-02-16 18:00:00",
+      "fixed_busiest_departures": 428
+    },
+    "fold2": {
+      "F_buses": 643.5,
+      "F_departure_units": 429,
+      "fixed_busiest_timestamp": "2018-02-22 18:00:00",
+      "fixed_busiest_departures": 429
+    },
+    "fold3": {
+      "F_buses": 645.0,
+      "F_departure_units": 430,
+      "fixed_busiest_timestamp": "2018-03-01 18:00:00",
+      "fixed_busiest_departures": 430
+    },
+    "fold4": {
+      "F_buses": 648.0,
+      "F_departure_units": 432,
+      "fixed_busiest_timestamp": "2018-03-08 18:00:00",
+      "fixed_busiest_departures": 432
+    },
+    "fold5": {
+      "F_buses": 649.5,
+      "F_departure_units": 433,
+      "fixed_busiest_timestamp": "2018-03-15 18:00:00",
+      "fixed_busiest_departures": 433
+    },
+    "fold6": {
+      "F_buses": 645.0,
+      "F_departure_units": 430,
+      "fixed_busiest_timestamp": "2018-03-22 18:00:00",
+      "fixed_busiest_departures": 430
+    },
+    "fold7": {
+      "F_buses": 643.5,
+      "F_departure_units": 429,
+      "fixed_busiest_timestamp": "2018-03-29 18:00:00",
+      "fixed_busiest_departures": 429
+    }
+  },
+  "parameters": {
+    "K": 60.0,
+    "L": 0.9,
+    "T_min": 90.0,
+    "w_wait": 1.0,
+    "w_over": 15.0,
+    "w_op": 100.0,
+    "x_min": 1,
+    "x_max_by_route": {
+      "SER_1d28": 86,
+      "SER_8b94": 87,
+      "SER_49d1": 70,
+      "SER_108c": 75,
+      "SER_8722": 94,
+      "SER_031b": 72,
+      "SER_be47": 75,
+      "SER_f64c": 15
+    },
+    "service_hours_inclusive": [
+      5,
+      21
+    ],
+    "peak_hours": [
+      7,
+      8,
+      9,
+      17,
+      18,
+      19
+    ],
+    "demand_rounding": "clip below 0; ceil to integer"
+  },
+  "plans": {
+    "fixed": {
+      "demand_column": "p_fixed"
+    },
+    "naive": {
+      "demand_column": "p_naive"
+    },
+    "point": {
+      "demand_column": "p_point"
+    },
+    "robust": {
+      "demand_column": "p_hi"
+    },
+    "oracle": {
+      "demand_column": "y"
+    }
+  },
+  "row_counts": {
+    "rows_per_plan": 6664,
+    "total_plan_rows": 33320,
+    "folds": 7
+  },
+  "forecast_error_vs_regret_ranking": {
+    "forecast_error_order_best_to_worst": [
+      "oracle",
+      "point",
+      "fixed",
+      "naive",
+      "robust"
+    ],
+    "regret_order_best_to_worst": [
+      "oracle",
+      "robust",
+      "point",
+      "naive",
+      "fixed"
+    ],
+    "by_plan": {
+      "fixed": {
+        "forecast_mae": 106.58148259303721,
+        "forecast_error_rank": 3,
+        "pooled_regret": 4318962.710491788,
+        "regret_rank": 5
+      },
+      "naive": {
+        "forecast_mae": 110.2983193277311,
+        "forecast_error_rank": 4,
+        "pooled_regret": 4048774.3887002356,
+        "regret_rank": 4
+      },
+      "point": {
+        "forecast_mae": 95.95573229291716,
+        "forecast_error_rank": 2,
+        "pooled_regret": 3450503.485932205,
+        "regret_rank": 3
+      },
+      "robust": {
+        "forecast_mae": 172.79726890756302,
+        "forecast_error_rank": 5,
+        "pooled_regret": 1610169.4834675528,
+        "regret_rank": 2
+      },
+      "oracle": {
+        "forecast_mae": 0.0,
+        "forecast_error_rank": 1,
+        "pooled_regret": 0.0,
+        "regret_rank": 1
+      }
+    }
+  },
+  "main_run_still_saturated_point_share_above_50pct": false
+}
