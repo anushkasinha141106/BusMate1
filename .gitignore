@@ -15,3 +15,7 @@ DistanceMatrix.csv
 BusMate_CityFlow/BUS_DATA_MAR_2018.csv
 BusMate_CityFlow/BusStopList.csv
 BusMate_CityFlow/DistanceMatrix.csv
+
+BusMate_CityFlow/data/
+BusMate_CityFlow/results/
+BusMate_CityFlow/results_rolling/
