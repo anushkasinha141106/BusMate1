@@ -12,7 +12,7 @@
   ],
   "functions": {
     "api/index.js": {
-      "includeFiles": ["private/**"]
+      "includeFiles": "private/**"
     }
   }
 }
