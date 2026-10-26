@@ -1,10 +1,29 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom'
-import { Accessibility, ArrowUpRight, BusFront, CheckCircle2, ChevronDown, Globe2, Menu, X } from 'lucide-react'
+import {
+  Accessibility,
+  ArrowUpRight,
+  BusFront,
+  CheckCircle2,
+  ChevronDown,
+  Globe2,
+  Menu,
+  X,
+} from 'lucide-react'
 import { usePreferences } from './context/PreferencesContext.jsx'
 import { translate } from './i18n/translations.js'
-import { ModelAndData, ModelComparison, FleetTradeoff, StatisticalTestsPage } from './pages/MethodPages.jsx'
-import { OverviewPage, FrequencyPlanPage, ForecastPage, PlanComparisonPage } from './pages/PlannerPages.jsx'
+import {
+  ModelAndData,
+  ModelComparison,
+  FleetTradeoff,
+  StatisticalTestsPage,
+} from './pages/MethodPages.jsx'
+import {
+  OverviewPage,
+  FrequencyPlanPage,
+  ForecastPage,
+  PlanComparisonPage,
+} from './pages/PlannerPages.jsx'
 
 const URLS = {
   metrics: '/api/d2/metrics.json',
@@ -16,9 +35,14 @@ const URLS = {
   rolling: '/api/d2/rolling_metrics.json',
 }
 
-const NUM = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 })
+const NUM = new Intl.NumberFormat('en-IN', {
+  maximumFractionDigits: 2,
+})
+
 const PCT = (v) => `${(Number(v) * 100).toFixed(2)}%`
-const fmt = (v) => Number.isFinite(Number(v)) ? NUM.format(Number(v)) : '—'
+
+const fmt = (v) =>
+  Number.isFinite(Number(v)) ? NUM.format(Number(v)) : '—'
 
 function useDashboardData() {
   const [data, setData] = useState(null)
@@ -39,10 +63,14 @@ function useDashboardData() {
       })
     )
       .then((entries) => {
-        if (live) setData(Object.fromEntries(entries))
+        if (live) {
+          setData(Object.fromEntries(entries))
+        }
       })
       .catch(() => {
-        if (live) setError(true)
+        if (live) {
+          setError(true)
+        }
       })
 
     return () => {
@@ -60,24 +88,33 @@ function AccessPanel({ open, onClose }) {
     if (!open) return undefined
 
     const handle = (event) => {
-      if (event.key === 'Escape') onClose()
+      if (event.key === 'Escape') {
+        onClose()
+      }
     }
 
     window.addEventListener('keydown', handle)
 
-    return () => window.removeEventListener('keydown', handle)
+    return () => {
+      window.removeEventListener('keydown', handle)
+    }
   }, [open, onClose])
 
   if (!open) return null
 
   const update = (key, value) =>
-    setPrefs((current) => ({ ...current, [key]: value }))
+    setPrefs((current) => ({
+      ...current,
+      [key]: value,
+    }))
 
   return (
     <div
       className="drawer-backdrop"
       onMouseDown={(e) => {
-        if (e.target === e.currentTarget) onClose()
+        if (e.target === e.currentTarget) {
+          onClose()
+        }
       }}
     >
       <aside
@@ -158,8 +195,8 @@ function AccessPanel({ open, onClose }) {
         />
 
         <p className="helper-copy">
-          Preferences are stored in this browser. Cross-dashboard persistence
-          depends on both dashboards sharing an origin.
+          Preferences are stored in this browser. Cross-dashboard
+          persistence depends on both dashboards sharing an origin.
         </p>
 
         <button
@@ -177,6 +214,7 @@ function Toggle({ label, checked, onChange }) {
   return (
     <label className="toggle-row">
       <span>{label}</span>
+
       <input
         type="checkbox"
         role="switch"
@@ -204,7 +242,9 @@ function Navbar({ onAccess }) {
 
     window.addEventListener('keydown', close)
 
-    return () => window.removeEventListener('keydown', close)
+    return () => {
+      window.removeEventListener('keydown', close)
+    }
   }, [])
 
   const links = [
@@ -233,7 +273,9 @@ function Navbar({ onAccess }) {
   ]
 
   const toggleMenu = (name) =>
-    setOpenMenu((current) => (current === name ? null : name))
+    setOpenMenu((current) =>
+      current === name ? null : name
+    )
 
   return (
     <header className="site-header" role="banner">
@@ -256,7 +298,9 @@ function Navbar({ onAccess }) {
         <button
           className="icon-button mobile-menu-button"
           aria-label={
-            mobileOpen ? 'Close navigation' : 'Open navigation'
+            mobileOpen
+              ? 'Close navigation'
+              : 'Open navigation'
           }
           aria-expanded={mobileOpen}
           aria-controls="cityflow-primary-nav"
@@ -265,8 +309,11 @@ function Navbar({ onAccess }) {
           {mobileOpen ? <X /> : <Menu />}
         </button>
 
-        <div className={`nav-content ${mobileOpen ? 'nav-open' : ''}`}>
-
+        <div
+          className={`nav-content ${
+            mobileOpen ? 'nav-open' : ''
+          }`}
+        >
           <nav
             id="cityflow-primary-nav"
             className="main-nav"
@@ -299,7 +346,10 @@ function Navbar({ onAccess }) {
                 onClick={() => toggleMenu('method')}
               >
                 Method and evidence
-                <ChevronDown size={15} aria-hidden="true" />
+                <ChevronDown
+                  size={15}
+                  aria-hidden="true"
+                />
               </button>
 
               {openMenu === 'method' && (
@@ -328,9 +378,15 @@ function Navbar({ onAccess }) {
                 aria-haspopup="menu"
                 onClick={() => toggleMenu('switch')}
               >
-                <ArrowUpRight size={16} aria-hidden="true" />
+                <ArrowUpRight
+                  size={16}
+                  aria-hidden="true"
+                />
                 Switch
-                <ChevronDown size={14} aria-hidden="true" />
+                <ChevronDown
+                  size={14}
+                  aria-hidden="true"
+                />
               </button>
 
               {openMenu === 'switch' && (
@@ -356,18 +412,29 @@ function Navbar({ onAccess }) {
               className="access-button"
               onClick={onAccess}
             >
-              <Accessibility size={17} aria-hidden="true" />
+              <Accessibility
+                size={17}
+                aria-hidden="true"
+              />
               <span>Accessibility</span>
             </button>
 
             <label className="language-control">
-              <Globe2 size={16} aria-hidden="true" />
-              <span className="sr-only">Language</span>
+              <Globe2
+                size={16}
+                aria-hidden="true"
+              />
+
+              <span className="sr-only">
+                Language
+              </span>
 
               <select
                 aria-label="Language"
                 value={language}
-                onChange={(e) => setLanguage(e.target.value)}
+                onChange={(e) =>
+                  setLanguage(e.target.value)
+                }
               >
                 <option value="en">English</option>
                 <option value="hi">Hindi</option>
@@ -384,7 +451,10 @@ function Navbar({ onAccess }) {
 
 function Footer() {
   return (
-    <footer className="site-footer" role="contentinfo">
+    <footer
+      className="site-footer"
+      role="contentinfo"
+    >
       <div className="footer-inner">
 
         <div className="footer-brand">
@@ -398,18 +468,23 @@ function Footer() {
         </div>
 
         <p>
-          Scenario planning prototype · assumptions shown with results
+          Scenario planning prototype · assumptions
+          shown with results
         </p>
 
         <div className="footer-status">
-          <CheckCircle2 size={16} aria-hidden="true" />
+          <CheckCircle2
+            size={16}
+            aria-hidden="true"
+          />
           <span>Static evaluation data loaded</span>
         </div>
 
       </div>
 
       <div className="footer-bottom">
-        Observed UrbanBus data, scenario-mapped to Pune corridor names.
+        Observed UrbanBus data, scenario-mapped to Pune
+        corridor names.
       </div>
     </footer>
   )
@@ -420,7 +495,10 @@ function Layout({ children }) {
 
   return (
     <>
-      <a className="skip-link" href="#main-content">
+      <a
+        className="skip-link"
+        href="#main-content"
+      >
         Skip to content
       </a>
 
@@ -429,7 +507,10 @@ function Layout({ children }) {
       />
 
       <div className="page-wrap">
-        <main id="main-content" tabIndex="-1">
+        <main
+          id="main-content"
+          tabIndex="-1"
+        >
           {children}
         </main>
       </div>
@@ -456,7 +537,10 @@ function DashboardApp() {
   if (error) {
     return (
       <Layout>
-        <div className="loading-card" role="alert">
+        <div
+          className="loading-card"
+          role="alert"
+        >
           {translate(language, 'dataError')}
         </div>
       </Layout>
@@ -466,7 +550,10 @@ function DashboardApp() {
   if (!data) {
     return (
       <Layout>
-        <div className="loading-card" role="status">
+        <div
+          className="loading-card"
+          role="status"
+        >
           <span className="spinner" />
           {translate(language, 'loading')}
         </div>
@@ -477,75 +564,123 @@ function DashboardApp() {
   return (
     <Layout>
       <Routes>
+
         <Route
           path="/"
-          element={<Navigate to="/overview" replace />}
+          element={
+            <Navigate
+              to="/overview"
+              replace
+            />
+          }
         />
 
         <Route
           path="/overview"
-          element={<OverviewPage data={data} />}
+          element={
+            <OverviewPage data={data} />
+          }
         />
 
         <Route
           path="/frequency"
-          element={<FrequencyPlanPage data={data} />}
+          element={
+            <FrequencyPlanPage data={data} />
+          }
         />
 
         <Route
           path="/forecast"
-          element={<ForecastPage data={data} />}
+          element={
+            <ForecastPage data={data} />
+          }
         />
 
         <Route
           path="/compare"
-          element={<PlanComparisonPage data={data} />}
+          element={
+            <PlanComparisonPage data={data} />
+          }
         />
 
         <Route
           path="/method"
-          element={<Navigate to="/method/model" replace />}
+          element={
+            <Navigate
+              to="/method/model"
+              replace
+            />
+          }
         />
 
         <Route
           path="/method/model"
-          element={<ModelAndData data={data} />}
+          element={
+            <ModelAndData data={data} />
+          }
         />
 
         <Route
           path="/method/comparison"
-          element={<ModelComparison data={data} />}
+          element={
+            <ModelComparison data={data} />
+          }
         />
 
         <Route
           path="/method/current"
-          element={<FleetTradeoff data={data} />}
+          element={
+            <FleetTradeoff data={data} />
+          }
         />
 
         <Route
           path="/method/tests"
-          element={<StatisticalTestsPage data={data} />}
+          element={
+            <StatisticalTestsPage data={data} />
+          }
         />
 
         <Route
           path="/model"
-          element={<Navigate to="/method/model" replace />}
+          element={
+            <Navigate
+              to="/method/model"
+              replace
+            />
+          }
         />
 
         <Route
           path="/comparison"
-          element={<Navigate to="/method/comparison" replace />}
+          element={
+            <Navigate
+              to="/method/comparison"
+              replace
+            />
+          }
         />
 
         <Route
           path="/current"
-          element={<Navigate to="/compare" replace />}
+          element={
+            <Navigate
+              to="/compare"
+              replace
+            />
+          }
         />
 
         <Route
           path="*"
-          element={<Navigate to="/model" replace />}
+          element={
+            <Navigate
+              to="/model"
+              replace
+            />
+          }
         />
+
       </Routes>
 
       <p className="language-note">
